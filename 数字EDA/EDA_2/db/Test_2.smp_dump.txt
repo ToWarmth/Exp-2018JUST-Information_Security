@@ -1,0 +1,7 @@
+
+State Machine - |Test_2|state
+Name state.ERROR state.LOCATE state.CHECK state.SEARCH 
+state.SEARCH 0 0 0 0 
+state.CHECK 0 0 1 1 
+state.LOCATE 0 1 0 1 
+state.ERROR 1 0 0 1 

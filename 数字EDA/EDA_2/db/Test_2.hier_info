@@ -1,0 +1,33 @@
+|Test_2
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => r[0].CLK
+clk => r[1].CLK
+clk => s[0].CLK
+clk => s[1].CLK
+clk => state~1.DATAIN
+rst_n => s.OUTPUTSELECT
+rst_n => s.OUTPUTSELECT
+rst_n => r.OUTPUTSELECT
+rst_n => r.OUTPUTSELECT
+rst_n => cnt.OUTPUTSELECT
+rst_n => cnt.OUTPUTSELECT
+rst_n => cnt.OUTPUTSELECT
+rst_n => cnt.OUTPUTSELECT
+rst_n => state.OUTPUTSELECT
+rst_n => state.OUTPUTSELECT
+rst_n => state.OUTPUTSELECT
+rst_n => state.OUTPUTSELECT
+data[0] => Equal0.IN3
+data[1] => Equal0.IN2
+data[2] => Equal0.IN1
+data[3] => Equal0.IN7
+data[4] => Equal0.IN6
+data[5] => Equal0.IN5
+data[6] => Equal0.IN0
+data[7] => Equal0.IN4
+syn_out_flag <= syn_out_flag.DB_MAX_OUTPUT_PORT_TYPE
+
+

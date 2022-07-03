@@ -1,0 +1,10 @@
+|Test_1
+clk => flag.CLK
+clk => dataout~reg0.CLK
+clk => com[0].CLK
+clk => com[1].CLK
+datain => com[0].DATAIN
+datain => com[1].DATAIN
+dataout <= dataout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,57 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Test_2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Sce_dio/Desktop/EDA_2 {C:/Users/Sce_dio/Desktop/EDA_2/Test_2.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:58:20 on Jun 24,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sce_dio/Desktop/EDA_2" C:/Users/Sce_dio/Desktop/EDA_2/Test_2.v 
+# -- Compiling module Test_2
+# 
+# Top level modules:
+# 	Test_2
+# End time: 16:58:20 on Jun 24,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Sce_dio/Desktop/EDA_2 {C:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:58:20 on Jun 24,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Sce_dio/Desktop/EDA_2" C:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v 
+# -- Compiling module test_syn_frame_search
+# 
+# Top level modules:
+# 	test_syn_frame_search
+# End time: 16:58:20 on Jun 24,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  test_syn_frame_search
+# vsim -gui "+altera" -l msim_transcript -do "Test_2_run_msim_rtl_verilog.do" 
+# Start time: 16:58:20 on Jun 24,2020
+# Loading work.test_syn_frame_search
+# Loading work.Test_2
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : C:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v(24)
+#    Time: 1100 ns  Iteration: 0  Instance: /test_syn_frame_search
+# 1
+# Break in Module test_syn_frame_search at C:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v line 24
+# Simulation Breakpoint: 1
+# Break in Module test_syn_frame_search at C:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v line 24
+# MACRO ./Test_2_run_msim_rtl_verilog.do PAUSED at line 17
+# End time: 17:00:09 on Jun 24,2020, Elapsed time: 0:01:49
+# Errors: 0, Warnings: 0

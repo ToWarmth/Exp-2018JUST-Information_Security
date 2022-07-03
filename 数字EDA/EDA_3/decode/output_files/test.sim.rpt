@@ -1,0 +1,1054 @@
+Simulator report for test
+Wed Jun 24 17:08:07 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 456 nodes    ;
+; Simulation Coverage         ;       2.41 % ;
+; Total Number of Transitions ; 293          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                              ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                            ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                         ; Timing        ;
+; Start time                                                                                 ; 0 ns                                               ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                ;               ;
+; Vector input source                                                                        ; C:/Users/Sce_dio/Desktop/EDA_3/decode/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                 ; On            ;
+; Check outputs                                                                              ; Off                                                ; Off           ;
+; Report simulation coverage                                                                 ; On                                                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                ; Off           ;
+; Detect glitches                                                                            ; Off                                                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                               ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       2.41 % ;
+; Total nodes checked                                 ; 456          ;
+; Total output ports checked                          ; 456          ;
+; Total output ports with complete 1/0-value coverage ; 11           ;
+; Total output ports with no 1/0-value coverage       ; 436          ;
+; Total output ports with no 1-value coverage         ; 439          ;
+; Total output ports with no 0-value coverage         ; 442          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                  ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |test|cyclic_reg~0  ; |test|cyclic_reg~0  ; out0             ;
+; |test|cyclic_reg~1  ; |test|cyclic_reg~1  ; out0             ;
+; |test|cyclic_reg~2  ; |test|cyclic_reg~2  ; out0             ;
+; |test|cyclic_reg[0] ; |test|cyclic_reg[0] ; regout           ;
+; |test|cyclic_reg[1] ; |test|cyclic_reg[1] ; regout           ;
+; |test|cyclic_reg[2] ; |test|cyclic_reg[2] ; regout           ;
+; |test|clk           ; |test|clk           ; out              ;
+; |test|state~1       ; |test|state~1       ; out0             ;
+; |test|state~7       ; |test|state~7       ; out0             ;
+; |test|Selector3~0   ; |test|Selector3~0   ; out              ;
+; |test|Selector4~0   ; |test|Selector4~0   ; out              ;
++---------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |test|done[15]        ; |test|done[15]        ; regout           ;
+; |test|state~0         ; |test|state~0         ; out              ;
+; |test|databuf~0       ; |test|databuf~0       ; out0             ;
+; |test|databuf~1       ; |test|databuf~1       ; out0             ;
+; |test|databuf~2       ; |test|databuf~2       ; out              ;
+; |test|databuf~5       ; |test|databuf~5       ; out0             ;
+; |test|databuf~6       ; |test|databuf~6       ; out              ;
+; |test|databuf~7       ; |test|databuf~7       ; out0             ;
+; |test|databuf~8       ; |test|databuf~8       ; out              ;
+; |test|databuf~9       ; |test|databuf~9       ; out0             ;
+; |test|databuf~10      ; |test|databuf~10      ; out              ;
+; |test|databuf~11      ; |test|databuf~11      ; out0             ;
+; |test|databuf~12      ; |test|databuf~12      ; out              ;
+; |test|databuf~13      ; |test|databuf~13      ; out0             ;
+; |test|databuf~14      ; |test|databuf~14      ; out              ;
+; |test|dataout~0       ; |test|dataout~0       ; out              ;
+; |test|dataout~1       ; |test|dataout~1       ; out              ;
+; |test|dataout~2       ; |test|dataout~2       ; out              ;
+; |test|done[14]        ; |test|done[14]        ; regout           ;
+; |test|dataout~3       ; |test|dataout~3       ; out              ;
+; |test|outbuf~0        ; |test|outbuf~0        ; out              ;
+; |test|outbuf~1        ; |test|outbuf~1        ; out              ;
+; |test|outbuf~2        ; |test|outbuf~2        ; out              ;
+; |test|done[13]        ; |test|done[13]        ; regout           ;
+; |test|outbuf~3        ; |test|outbuf~3        ; out              ;
+; |test|outbuf~4        ; |test|outbuf~4        ; out              ;
+; |test|outbuf~5        ; |test|outbuf~5        ; out              ;
+; |test|outbuf~6        ; |test|outbuf~6        ; out              ;
+; |test|done[12]        ; |test|done[12]        ; regout           ;
+; |test|done[11]        ; |test|done[11]        ; regout           ;
+; |test|done[10]        ; |test|done[10]        ; regout           ;
+; |test|done~0          ; |test|done~0          ; out              ;
+; |test|done~1          ; |test|done~1          ; out              ;
+; |test|done[9]         ; |test|done[9]         ; regout           ;
+; |test|done~2          ; |test|done~2          ; out              ;
+; |test|done~3          ; |test|done~3          ; out              ;
+; |test|done~4          ; |test|done~4          ; out              ;
+; |test|done~5          ; |test|done~5          ; out              ;
+; |test|done[8]         ; |test|done[8]         ; regout           ;
+; |test|done~6          ; |test|done~6          ; out              ;
+; |test|done~7          ; |test|done~7          ; out              ;
+; |test|done~8          ; |test|done~8          ; out              ;
+; |test|done~9          ; |test|done~9          ; out              ;
+; |test|done[7]         ; |test|done[7]         ; regout           ;
+; |test|done~10         ; |test|done~10         ; out              ;
+; |test|done~11         ; |test|done~11         ; out              ;
+; |test|done~12         ; |test|done~12         ; out              ;
+; |test|done~13         ; |test|done~13         ; out              ;
+; |test|done[6]         ; |test|done[6]         ; regout           ;
+; |test|done~14         ; |test|done~14         ; out              ;
+; |test|done~15         ; |test|done~15         ; out              ;
+; |test|done~16         ; |test|done~16         ; out              ;
+; |test|done~17         ; |test|done~17         ; out              ;
+; |test|done[5]         ; |test|done[5]         ; regout           ;
+; |test|done~18         ; |test|done~18         ; out              ;
+; |test|done~19         ; |test|done~19         ; out              ;
+; |test|done~20         ; |test|done~20         ; out              ;
+; |test|done~21         ; |test|done~21         ; out              ;
+; |test|done[4]         ; |test|done[4]         ; regout           ;
+; |test|done~22         ; |test|done~22         ; out              ;
+; |test|done~23         ; |test|done~23         ; out              ;
+; |test|done~24         ; |test|done~24         ; out              ;
+; |test|done~25         ; |test|done~25         ; out              ;
+; |test|done[3]         ; |test|done[3]         ; regout           ;
+; |test|done~26         ; |test|done~26         ; out              ;
+; |test|done~27         ; |test|done~27         ; out              ;
+; |test|done~28         ; |test|done~28         ; out              ;
+; |test|done~29         ; |test|done~29         ; out              ;
+; |test|done[2]         ; |test|done[2]         ; regout           ;
+; |test|done~30         ; |test|done~30         ; out              ;
+; |test|done~31         ; |test|done~31         ; out              ;
+; |test|done[1]         ; |test|done[1]         ; regout           ;
+; |test|outbuf~8        ; |test|outbuf~8        ; out              ;
+; |test|outbuf~9        ; |test|outbuf~9        ; out              ;
+; |test|outbuf~10       ; |test|outbuf~10       ; out              ;
+; |test|done[0]         ; |test|done[0]         ; regout           ;
+; |test|outbuf~11       ; |test|outbuf~11       ; out              ;
+; |test|outbuf~12       ; |test|outbuf~12       ; out              ;
+; |test|outbuf~13       ; |test|outbuf~13       ; out              ;
+; |test|outbuf~14       ; |test|outbuf~14       ; out              ;
+; |test|outbuf~15       ; |test|outbuf~15       ; out              ;
+; |test|outbuf~16       ; |test|outbuf~16       ; out              ;
+; |test|outbuf~17       ; |test|outbuf~17       ; out              ;
+; |test|outbuf~18       ; |test|outbuf~18       ; out              ;
+; |test|outbuf~19       ; |test|outbuf~19       ; out              ;
+; |test|outbuf~20       ; |test|outbuf~20       ; out              ;
+; |test|dataout~4       ; |test|dataout~4       ; out              ;
+; |test|dataout~5       ; |test|dataout~5       ; out              ;
+; |test|dataout~6       ; |test|dataout~6       ; out              ;
+; |test|dataout~7       ; |test|dataout~7       ; out              ;
+; |test|state.finish    ; |test|state.finish    ; regout           ;
+; |test|done[16]        ; |test|done[16]        ; regout           ;
+; |test|done[17]        ; |test|done[17]        ; regout           ;
+; |test|done[18]        ; |test|done[18]        ; regout           ;
+; |test|done[19]        ; |test|done[19]        ; regout           ;
+; |test|done[20]        ; |test|done[20]        ; regout           ;
+; |test|done[21]        ; |test|done[21]        ; regout           ;
+; |test|done[22]        ; |test|done[22]        ; regout           ;
+; |test|done[23]        ; |test|done[23]        ; regout           ;
+; |test|done[24]        ; |test|done[24]        ; regout           ;
+; |test|done[25]        ; |test|done[25]        ; regout           ;
+; |test|done[26]        ; |test|done[26]        ; regout           ;
+; |test|done[27]        ; |test|done[27]        ; regout           ;
+; |test|done[28]        ; |test|done[28]        ; regout           ;
+; |test|done[29]        ; |test|done[29]        ; regout           ;
+; |test|done[30]        ; |test|done[30]        ; regout           ;
+; |test|done[31]        ; |test|done[31]        ; regout           ;
+; |test|rout[0]         ; |test|rout[0]         ; regout           ;
+; |test|rout[1]         ; |test|rout[1]         ; regout           ;
+; |test|rout[2]         ; |test|rout[2]         ; regout           ;
+; |test|index[1]        ; |test|index[1]        ; regout           ;
+; |test|index[2]        ; |test|index[2]        ; regout           ;
+; |test|index[3]        ; |test|index[3]        ; regout           ;
+; |test|index[4]        ; |test|index[4]        ; regout           ;
+; |test|index[5]        ; |test|index[5]        ; regout           ;
+; |test|index[6]        ; |test|index[6]        ; regout           ;
+; |test|index[7]        ; |test|index[7]        ; regout           ;
+; |test|index[8]        ; |test|index[8]        ; regout           ;
+; |test|index[9]        ; |test|index[9]        ; regout           ;
+; |test|index[10]       ; |test|index[10]       ; regout           ;
+; |test|index[11]       ; |test|index[11]       ; regout           ;
+; |test|index[12]       ; |test|index[12]       ; regout           ;
+; |test|index[13]       ; |test|index[13]       ; regout           ;
+; |test|index[14]       ; |test|index[14]       ; regout           ;
+; |test|index[15]       ; |test|index[15]       ; regout           ;
+; |test|index[16]       ; |test|index[16]       ; regout           ;
+; |test|index[17]       ; |test|index[17]       ; regout           ;
+; |test|index[18]       ; |test|index[18]       ; regout           ;
+; |test|index[19]       ; |test|index[19]       ; regout           ;
+; |test|index[20]       ; |test|index[20]       ; regout           ;
+; |test|index[21]       ; |test|index[21]       ; regout           ;
+; |test|index[22]       ; |test|index[22]       ; regout           ;
+; |test|index[23]       ; |test|index[23]       ; regout           ;
+; |test|index[24]       ; |test|index[24]       ; regout           ;
+; |test|index[25]       ; |test|index[25]       ; regout           ;
+; |test|index[26]       ; |test|index[26]       ; regout           ;
+; |test|index[27]       ; |test|index[27]       ; regout           ;
+; |test|index[28]       ; |test|index[28]       ; regout           ;
+; |test|index[29]       ; |test|index[29]       ; regout           ;
+; |test|index[30]       ; |test|index[30]       ; regout           ;
+; |test|index[31]       ; |test|index[31]       ; regout           ;
+; |test|databuf[0]      ; |test|databuf[0]      ; regout           ;
+; |test|databuf[1]      ; |test|databuf[1]      ; regout           ;
+; |test|databuf[2]      ; |test|databuf[2]      ; regout           ;
+; |test|databuf[3]      ; |test|databuf[3]      ; regout           ;
+; |test|databuf[4]      ; |test|databuf[4]      ; regout           ;
+; |test|databuf[5]      ; |test|databuf[5]      ; regout           ;
+; |test|outbuf[0]~reg0  ; |test|outbuf[0]~reg0  ; regout           ;
+; |test|outbuf[1]~reg0  ; |test|outbuf[1]~reg0  ; regout           ;
+; |test|outbuf[2]~reg0  ; |test|outbuf[2]~reg0  ; regout           ;
+; |test|outbuf[3]~reg0  ; |test|outbuf[3]~reg0  ; regout           ;
+; |test|outbuf[4]~reg0  ; |test|outbuf[4]~reg0  ; regout           ;
+; |test|outbuf[5]~reg0  ; |test|outbuf[5]~reg0  ; regout           ;
+; |test|outbuf[6]~reg0  ; |test|outbuf[6]~reg0  ; regout           ;
+; |test|dataout[0]~reg0 ; |test|dataout[0]~reg0 ; regout           ;
+; |test|dataout[1]~reg0 ; |test|dataout[1]~reg0 ; regout           ;
+; |test|dataout[2]~reg0 ; |test|dataout[2]~reg0 ; regout           ;
+; |test|dataout[3]~reg0 ; |test|dataout[3]~reg0 ; regout           ;
+; |test|state.compute   ; |test|state.compute   ; regout           ;
+; |test|state.00        ; |test|state.00        ; regout           ;
+; |test|start           ; |test|start           ; out              ;
+; |test|d_finish        ; |test|d_finish        ; out              ;
+; |test|datain          ; |test|datain          ; out              ;
+; |test|outbuf[0]       ; |test|outbuf[0]       ; pin_out          ;
+; |test|outbuf[1]       ; |test|outbuf[1]       ; pin_out          ;
+; |test|outbuf[2]       ; |test|outbuf[2]       ; pin_out          ;
+; |test|outbuf[3]       ; |test|outbuf[3]       ; pin_out          ;
+; |test|outbuf[4]       ; |test|outbuf[4]       ; pin_out          ;
+; |test|outbuf[5]       ; |test|outbuf[5]       ; pin_out          ;
+; |test|outbuf[6]       ; |test|outbuf[6]       ; pin_out          ;
+; |test|dataout[0]      ; |test|dataout[0]      ; pin_out          ;
+; |test|dataout[1]      ; |test|dataout[1]      ; pin_out          ;
+; |test|dataout[2]      ; |test|dataout[2]      ; pin_out          ;
+; |test|dataout[3]      ; |test|dataout[3]      ; pin_out          ;
+; |test|state.00~0      ; |test|state.00~0      ; out0             ;
+; |test|state~3         ; |test|state~3         ; out0             ;
+; |test|Selector0~0     ; |test|Selector0~0     ; out0             ;
+; |test|Selector0~1     ; |test|Selector0~1     ; out0             ;
+; |test|Selector0~2     ; |test|Selector0~2     ; out0             ;
+; |test|Selector0~3     ; |test|Selector0~3     ; out0             ;
+; |test|Selector0~4     ; |test|Selector0~4     ; out0             ;
+; |test|Selector1~0     ; |test|Selector1~0     ; out0             ;
+; |test|Selector1~1     ; |test|Selector1~1     ; out0             ;
+; |test|Selector2~0     ; |test|Selector2~0     ; out              ;
+; |test|Selector2~1     ; |test|Selector2~1     ; out              ;
+; |test|Selector5~0     ; |test|Selector5~0     ; out0             ;
+; |test|Selector5~1     ; |test|Selector5~1     ; out0             ;
+; |test|Selector5~2     ; |test|Selector5~2     ; out0             ;
+; |test|Selector6~0     ; |test|Selector6~0     ; out0             ;
+; |test|Selector6~1     ; |test|Selector6~1     ; out0             ;
+; |test|Selector6~2     ; |test|Selector6~2     ; out0             ;
+; |test|Selector7~0     ; |test|Selector7~0     ; out0             ;
+; |test|Selector7~1     ; |test|Selector7~1     ; out0             ;
+; |test|Selector7~2     ; |test|Selector7~2     ; out0             ;
+; |test|Selector8~0     ; |test|Selector8~0     ; out0             ;
+; |test|Selector8~1     ; |test|Selector8~1     ; out0             ;
+; |test|Selector8~2     ; |test|Selector8~2     ; out0             ;
+; |test|Selector9~0     ; |test|Selector9~0     ; out0             ;
+; |test|Selector9~1     ; |test|Selector9~1     ; out0             ;
+; |test|Selector9~2     ; |test|Selector9~2     ; out0             ;
+; |test|Selector10~0    ; |test|Selector10~0    ; out0             ;
+; |test|Selector10~1    ; |test|Selector10~1    ; out0             ;
+; |test|Selector10~2    ; |test|Selector10~2    ; out0             ;
+; |test|Selector11~0    ; |test|Selector11~0    ; out0             ;
+; |test|Selector11~1    ; |test|Selector11~1    ; out0             ;
+; |test|Selector11~2    ; |test|Selector11~2    ; out0             ;
+; |test|Selector12~0    ; |test|Selector12~0    ; out0             ;
+; |test|Selector12~1    ; |test|Selector12~1    ; out0             ;
+; |test|Selector12~2    ; |test|Selector12~2    ; out0             ;
+; |test|Selector13~0    ; |test|Selector13~0    ; out0             ;
+; |test|Selector13~1    ; |test|Selector13~1    ; out0             ;
+; |test|Selector13~2    ; |test|Selector13~2    ; out0             ;
+; |test|Selector14~0    ; |test|Selector14~0    ; out0             ;
+; |test|Selector14~1    ; |test|Selector14~1    ; out0             ;
+; |test|Selector14~2    ; |test|Selector14~2    ; out0             ;
+; |test|Selector15~0    ; |test|Selector15~0    ; out0             ;
+; |test|Selector15~1    ; |test|Selector15~1    ; out0             ;
+; |test|Selector15~2    ; |test|Selector15~2    ; out0             ;
+; |test|Selector16~0    ; |test|Selector16~0    ; out0             ;
+; |test|Selector16~1    ; |test|Selector16~1    ; out0             ;
+; |test|Selector16~2    ; |test|Selector16~2    ; out0             ;
+; |test|Selector17~0    ; |test|Selector17~0    ; out0             ;
+; |test|Selector17~1    ; |test|Selector17~1    ; out0             ;
+; |test|Selector17~2    ; |test|Selector17~2    ; out0             ;
+; |test|Selector18~0    ; |test|Selector18~0    ; out0             ;
+; |test|Selector18~1    ; |test|Selector18~1    ; out0             ;
+; |test|Selector18~2    ; |test|Selector18~2    ; out0             ;
+; |test|Selector19~0    ; |test|Selector19~0    ; out0             ;
+; |test|Selector19~1    ; |test|Selector19~1    ; out0             ;
+; |test|Selector19~2    ; |test|Selector19~2    ; out0             ;
+; |test|Selector20~0    ; |test|Selector20~0    ; out0             ;
+; |test|Selector20~1    ; |test|Selector20~1    ; out0             ;
+; |test|Selector20~2    ; |test|Selector20~2    ; out0             ;
+; |test|Selector21~0    ; |test|Selector21~0    ; out0             ;
+; |test|Selector21~1    ; |test|Selector21~1    ; out0             ;
+; |test|Selector21~2    ; |test|Selector21~2    ; out0             ;
+; |test|Selector22~0    ; |test|Selector22~0    ; out0             ;
+; |test|Selector22~1    ; |test|Selector22~1    ; out0             ;
+; |test|Selector22~2    ; |test|Selector22~2    ; out0             ;
+; |test|Selector23~0    ; |test|Selector23~0    ; out0             ;
+; |test|Selector23~1    ; |test|Selector23~1    ; out0             ;
+; |test|Selector23~2    ; |test|Selector23~2    ; out0             ;
+; |test|Selector24~0    ; |test|Selector24~0    ; out0             ;
+; |test|Selector24~1    ; |test|Selector24~1    ; out0             ;
+; |test|Selector24~2    ; |test|Selector24~2    ; out0             ;
+; |test|Selector25~0    ; |test|Selector25~0    ; out0             ;
+; |test|Selector25~1    ; |test|Selector25~1    ; out0             ;
+; |test|Selector25~2    ; |test|Selector25~2    ; out0             ;
+; |test|Selector26~0    ; |test|Selector26~0    ; out0             ;
+; |test|Selector26~1    ; |test|Selector26~1    ; out0             ;
+; |test|Selector26~2    ; |test|Selector26~2    ; out0             ;
+; |test|Selector27~0    ; |test|Selector27~0    ; out0             ;
+; |test|Selector27~1    ; |test|Selector27~1    ; out0             ;
+; |test|Selector27~2    ; |test|Selector27~2    ; out0             ;
+; |test|Selector28~0    ; |test|Selector28~0    ; out0             ;
+; |test|Selector28~1    ; |test|Selector28~1    ; out0             ;
+; |test|Selector28~2    ; |test|Selector28~2    ; out0             ;
+; |test|Selector29~0    ; |test|Selector29~0    ; out0             ;
+; |test|Selector29~1    ; |test|Selector29~1    ; out0             ;
+; |test|Selector29~2    ; |test|Selector29~2    ; out0             ;
+; |test|Selector30~0    ; |test|Selector30~0    ; out0             ;
+; |test|Selector30~1    ; |test|Selector30~1    ; out0             ;
+; |test|Selector30~2    ; |test|Selector30~2    ; out0             ;
+; |test|Selector31~0    ; |test|Selector31~0    ; out0             ;
+; |test|Selector31~1    ; |test|Selector31~1    ; out0             ;
+; |test|Selector31~2    ; |test|Selector31~2    ; out0             ;
+; |test|Selector32~0    ; |test|Selector32~0    ; out0             ;
+; |test|Selector32~1    ; |test|Selector32~1    ; out0             ;
+; |test|Selector32~2    ; |test|Selector32~2    ; out0             ;
+; |test|Selector33~0    ; |test|Selector33~0    ; out0             ;
+; |test|Selector33~1    ; |test|Selector33~1    ; out0             ;
+; |test|Selector33~2    ; |test|Selector33~2    ; out0             ;
+; |test|Selector34~0    ; |test|Selector34~0    ; out0             ;
+; |test|Selector34~1    ; |test|Selector34~1    ; out0             ;
+; |test|Selector34~2    ; |test|Selector34~2    ; out0             ;
+; |test|Selector35~0    ; |test|Selector35~0    ; out0             ;
+; |test|Selector35~1    ; |test|Selector35~1    ; out0             ;
+; |test|Selector35~2    ; |test|Selector35~2    ; out0             ;
+; |test|Selector36~0    ; |test|Selector36~0    ; out0             ;
+; |test|Selector36~1    ; |test|Selector36~1    ; out0             ;
+; |test|Selector36~2    ; |test|Selector36~2    ; out0             ;
+; |test|Decoder0~0      ; |test|Decoder0~0      ; out0             ;
+; |test|Decoder0~1      ; |test|Decoder0~1      ; out0             ;
+; |test|Decoder0~2      ; |test|Decoder0~2      ; out0             ;
+; |test|Decoder0~3      ; |test|Decoder0~3      ; out0             ;
+; |test|Decoder0~4      ; |test|Decoder0~4      ; out0             ;
+; |test|Decoder0~6      ; |test|Decoder0~6      ; out0             ;
+; |test|Decoder1~0      ; |test|Decoder1~0      ; out0             ;
+; |test|Decoder1~1      ; |test|Decoder1~1      ; out0             ;
+; |test|Decoder1~2      ; |test|Decoder1~2      ; out0             ;
+; |test|Decoder1~3      ; |test|Decoder1~3      ; out0             ;
+; |test|Decoder1~4      ; |test|Decoder1~4      ; out0             ;
+; |test|Decoder1~5      ; |test|Decoder1~5      ; out0             ;
+; |test|Decoder1~6      ; |test|Decoder1~6      ; out0             ;
+; |test|LessThan0~0     ; |test|LessThan0~0     ; out0             ;
+; |test|LessThan0~1     ; |test|LessThan0~1     ; out0             ;
+; |test|LessThan0~2     ; |test|LessThan0~2     ; out0             ;
+; |test|LessThan0~3     ; |test|LessThan0~3     ; out0             ;
+; |test|LessThan0~4     ; |test|LessThan0~4     ; out0             ;
+; |test|LessThan0~5     ; |test|LessThan0~5     ; out0             ;
+; |test|LessThan0~6     ; |test|LessThan0~6     ; out0             ;
+; |test|LessThan0~7     ; |test|LessThan0~7     ; out0             ;
+; |test|LessThan0~8     ; |test|LessThan0~8     ; out0             ;
+; |test|LessThan0~9     ; |test|LessThan0~9     ; out0             ;
+; |test|LessThan0~10    ; |test|LessThan0~10    ; out0             ;
+; |test|LessThan0~11    ; |test|LessThan0~11    ; out0             ;
+; |test|LessThan0~12    ; |test|LessThan0~12    ; out0             ;
+; |test|LessThan0~13    ; |test|LessThan0~13    ; out0             ;
+; |test|LessThan0~14    ; |test|LessThan0~14    ; out0             ;
+; |test|LessThan0~15    ; |test|LessThan0~15    ; out0             ;
+; |test|LessThan0~16    ; |test|LessThan0~16    ; out0             ;
+; |test|LessThan0~17    ; |test|LessThan0~17    ; out0             ;
+; |test|LessThan0~18    ; |test|LessThan0~18    ; out0             ;
+; |test|LessThan0~19    ; |test|LessThan0~19    ; out0             ;
+; |test|LessThan0~20    ; |test|LessThan0~20    ; out0             ;
+; |test|LessThan0~21    ; |test|LessThan0~21    ; out0             ;
+; |test|LessThan0~22    ; |test|LessThan0~22    ; out0             ;
+; |test|LessThan0~23    ; |test|LessThan0~23    ; out0             ;
+; |test|LessThan0~24    ; |test|LessThan0~24    ; out0             ;
+; |test|LessThan0~25    ; |test|LessThan0~25    ; out0             ;
+; |test|LessThan0~26    ; |test|LessThan0~26    ; out0             ;
+; |test|LessThan0~27    ; |test|LessThan0~27    ; out0             ;
+; |test|LessThan0~28    ; |test|LessThan0~28    ; out0             ;
+; |test|LessThan0~29    ; |test|LessThan0~29    ; out0             ;
+; |test|LessThan0~30    ; |test|LessThan0~30    ; out0             ;
+; |test|LessThan0~31    ; |test|LessThan0~31    ; out0             ;
+; |test|LessThan0~32    ; |test|LessThan0~32    ; out0             ;
+; |test|LessThan0~33    ; |test|LessThan0~33    ; out0             ;
+; |test|LessThan0~34    ; |test|LessThan0~34    ; out0             ;
+; |test|LessThan0~35    ; |test|LessThan0~35    ; out0             ;
+; |test|LessThan0~36    ; |test|LessThan0~36    ; out0             ;
+; |test|LessThan0~37    ; |test|LessThan0~37    ; out0             ;
+; |test|LessThan0~38    ; |test|LessThan0~38    ; out0             ;
+; |test|LessThan0~39    ; |test|LessThan0~39    ; out0             ;
+; |test|LessThan0~40    ; |test|LessThan0~40    ; out0             ;
+; |test|LessThan0~41    ; |test|LessThan0~41    ; out0             ;
+; |test|LessThan0~42    ; |test|LessThan0~42    ; out0             ;
+; |test|LessThan0~43    ; |test|LessThan0~43    ; out0             ;
+; |test|LessThan0~44    ; |test|LessThan0~44    ; out0             ;
+; |test|LessThan0~45    ; |test|LessThan0~45    ; out0             ;
+; |test|LessThan0~46    ; |test|LessThan0~46    ; out0             ;
+; |test|LessThan0~47    ; |test|LessThan0~47    ; out0             ;
+; |test|LessThan0~48    ; |test|LessThan0~48    ; out0             ;
+; |test|LessThan0~49    ; |test|LessThan0~49    ; out0             ;
+; |test|LessThan0~50    ; |test|LessThan0~50    ; out0             ;
+; |test|LessThan0~51    ; |test|LessThan0~51    ; out0             ;
+; |test|LessThan0~52    ; |test|LessThan0~52    ; out0             ;
+; |test|Add0~0          ; |test|Add0~0          ; out0             ;
+; |test|Add0~1          ; |test|Add0~1          ; out0             ;
+; |test|Add0~2          ; |test|Add0~2          ; out0             ;
+; |test|Add0~3          ; |test|Add0~3          ; out0             ;
+; |test|Add0~4          ; |test|Add0~4          ; out0             ;
+; |test|Add0~5          ; |test|Add0~5          ; out0             ;
+; |test|Add0~6          ; |test|Add0~6          ; out0             ;
+; |test|Add0~7          ; |test|Add0~7          ; out0             ;
+; |test|Add0~8          ; |test|Add0~8          ; out0             ;
+; |test|Add0~9          ; |test|Add0~9          ; out0             ;
+; |test|Add0~10         ; |test|Add0~10         ; out0             ;
+; |test|Add0~11         ; |test|Add0~11         ; out0             ;
+; |test|Add0~12         ; |test|Add0~12         ; out0             ;
+; |test|Add0~13         ; |test|Add0~13         ; out0             ;
+; |test|Add0~14         ; |test|Add0~14         ; out0             ;
+; |test|Add0~15         ; |test|Add0~15         ; out0             ;
+; |test|Add0~16         ; |test|Add0~16         ; out0             ;
+; |test|Add0~17         ; |test|Add0~17         ; out0             ;
+; |test|Add0~18         ; |test|Add0~18         ; out0             ;
+; |test|Add0~19         ; |test|Add0~19         ; out0             ;
+; |test|Add0~20         ; |test|Add0~20         ; out0             ;
+; |test|Add0~21         ; |test|Add0~21         ; out0             ;
+; |test|Add0~22         ; |test|Add0~22         ; out0             ;
+; |test|Add0~23         ; |test|Add0~23         ; out0             ;
+; |test|Add0~24         ; |test|Add0~24         ; out0             ;
+; |test|Add0~25         ; |test|Add0~25         ; out0             ;
+; |test|Add0~26         ; |test|Add0~26         ; out0             ;
+; |test|Add0~27         ; |test|Add0~27         ; out0             ;
+; |test|Add0~28         ; |test|Add0~28         ; out0             ;
+; |test|Add0~29         ; |test|Add0~29         ; out0             ;
+; |test|Add0~30         ; |test|Add0~30         ; out0             ;
+; |test|Add0~31         ; |test|Add0~31         ; out0             ;
+; |test|Add0~32         ; |test|Add0~32         ; out0             ;
+; |test|Add0~33         ; |test|Add0~33         ; out0             ;
+; |test|Add0~34         ; |test|Add0~34         ; out0             ;
+; |test|Add0~35         ; |test|Add0~35         ; out0             ;
+; |test|Add0~36         ; |test|Add0~36         ; out0             ;
+; |test|Add0~37         ; |test|Add0~37         ; out0             ;
+; |test|Add0~38         ; |test|Add0~38         ; out0             ;
+; |test|Add0~39         ; |test|Add0~39         ; out0             ;
+; |test|Add0~40         ; |test|Add0~40         ; out0             ;
+; |test|Add0~41         ; |test|Add0~41         ; out0             ;
+; |test|Add0~42         ; |test|Add0~42         ; out0             ;
+; |test|Add0~43         ; |test|Add0~43         ; out0             ;
+; |test|Add0~44         ; |test|Add0~44         ; out0             ;
+; |test|Add0~45         ; |test|Add0~45         ; out0             ;
+; |test|Add0~46         ; |test|Add0~46         ; out0             ;
+; |test|Add0~47         ; |test|Add0~47         ; out0             ;
+; |test|Add0~48         ; |test|Add0~48         ; out0             ;
+; |test|Add0~49         ; |test|Add0~49         ; out0             ;
+; |test|Add0~50         ; |test|Add0~50         ; out0             ;
+; |test|Add0~51         ; |test|Add0~51         ; out0             ;
+; |test|Add0~52         ; |test|Add0~52         ; out0             ;
+; |test|Add0~53         ; |test|Add0~53         ; out0             ;
+; |test|Add0~54         ; |test|Add0~54         ; out0             ;
+; |test|Add0~55         ; |test|Add0~55         ; out0             ;
+; |test|Add0~56         ; |test|Add0~56         ; out0             ;
+; |test|Add0~57         ; |test|Add0~57         ; out0             ;
+; |test|Add0~58         ; |test|Add0~58         ; out0             ;
+; |test|Add0~59         ; |test|Add0~59         ; out0             ;
+; |test|Add0~60         ; |test|Add0~60         ; out0             ;
+; |test|Add0~61         ; |test|Add0~61         ; out0             ;
+; |test|Add0~62         ; |test|Add0~62         ; out0             ;
+; |test|Add0~63         ; |test|Add0~63         ; out0             ;
+; |test|Add0~64         ; |test|Add0~64         ; out0             ;
+; |test|Add0~65         ; |test|Add0~65         ; out0             ;
+; |test|Add0~66         ; |test|Add0~66         ; out0             ;
+; |test|Add0~67         ; |test|Add0~67         ; out0             ;
+; |test|Add0~68         ; |test|Add0~68         ; out0             ;
+; |test|Add0~69         ; |test|Add0~69         ; out0             ;
+; |test|Add0~70         ; |test|Add0~70         ; out0             ;
+; |test|Add0~71         ; |test|Add0~71         ; out0             ;
+; |test|Add0~72         ; |test|Add0~72         ; out0             ;
+; |test|Add0~73         ; |test|Add0~73         ; out0             ;
+; |test|Add0~74         ; |test|Add0~74         ; out0             ;
+; |test|Add0~75         ; |test|Add0~75         ; out0             ;
+; |test|Add0~76         ; |test|Add0~76         ; out0             ;
+; |test|Add0~77         ; |test|Add0~77         ; out0             ;
+; |test|Add0~78         ; |test|Add0~78         ; out0             ;
+; |test|Add0~79         ; |test|Add0~79         ; out0             ;
+; |test|Add0~80         ; |test|Add0~80         ; out0             ;
+; |test|Add0~81         ; |test|Add0~81         ; out0             ;
+; |test|Add0~82         ; |test|Add0~82         ; out0             ;
+; |test|Add0~83         ; |test|Add0~83         ; out0             ;
+; |test|Add0~84         ; |test|Add0~84         ; out0             ;
+; |test|Add0~85         ; |test|Add0~85         ; out0             ;
+; |test|Add0~86         ; |test|Add0~86         ; out0             ;
+; |test|Add0~87         ; |test|Add0~87         ; out0             ;
+; |test|Add0~88         ; |test|Add0~88         ; out0             ;
+; |test|Add0~89         ; |test|Add0~89         ; out0             ;
+; |test|Add0~90         ; |test|Add0~90         ; out0             ;
+; |test|Equal0~0        ; |test|Equal0~0        ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------+
+; Missing 0-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |test|done[15]        ; |test|done[15]        ; regout           ;
+; |test|state~0         ; |test|state~0         ; out              ;
+; |test|databuf~0       ; |test|databuf~0       ; out0             ;
+; |test|databuf~2       ; |test|databuf~2       ; out              ;
+; |test|databuf~3       ; |test|databuf~3       ; out0             ;
+; |test|databuf~4       ; |test|databuf~4       ; out              ;
+; |test|databuf~5       ; |test|databuf~5       ; out0             ;
+; |test|databuf~6       ; |test|databuf~6       ; out              ;
+; |test|databuf~7       ; |test|databuf~7       ; out0             ;
+; |test|databuf~8       ; |test|databuf~8       ; out              ;
+; |test|databuf~9       ; |test|databuf~9       ; out0             ;
+; |test|databuf~10      ; |test|databuf~10      ; out              ;
+; |test|databuf~11      ; |test|databuf~11      ; out0             ;
+; |test|databuf~12      ; |test|databuf~12      ; out              ;
+; |test|databuf~13      ; |test|databuf~13      ; out0             ;
+; |test|databuf~14      ; |test|databuf~14      ; out              ;
+; |test|dataout~0       ; |test|dataout~0       ; out              ;
+; |test|dataout~1       ; |test|dataout~1       ; out              ;
+; |test|dataout~2       ; |test|dataout~2       ; out              ;
+; |test|done[14]        ; |test|done[14]        ; regout           ;
+; |test|dataout~3       ; |test|dataout~3       ; out              ;
+; |test|outbuf~0        ; |test|outbuf~0        ; out              ;
+; |test|outbuf~1        ; |test|outbuf~1        ; out              ;
+; |test|outbuf~2        ; |test|outbuf~2        ; out              ;
+; |test|done[13]        ; |test|done[13]        ; regout           ;
+; |test|outbuf~3        ; |test|outbuf~3        ; out              ;
+; |test|outbuf~4        ; |test|outbuf~4        ; out              ;
+; |test|outbuf~5        ; |test|outbuf~5        ; out              ;
+; |test|outbuf~6        ; |test|outbuf~6        ; out              ;
+; |test|done[12]        ; |test|done[12]        ; regout           ;
+; |test|done[11]        ; |test|done[11]        ; regout           ;
+; |test|done[10]        ; |test|done[10]        ; regout           ;
+; |test|done~0          ; |test|done~0          ; out              ;
+; |test|done~1          ; |test|done~1          ; out              ;
+; |test|done[9]         ; |test|done[9]         ; regout           ;
+; |test|done~2          ; |test|done~2          ; out              ;
+; |test|done~3          ; |test|done~3          ; out              ;
+; |test|done~4          ; |test|done~4          ; out              ;
+; |test|done~5          ; |test|done~5          ; out              ;
+; |test|done[8]         ; |test|done[8]         ; regout           ;
+; |test|done~6          ; |test|done~6          ; out              ;
+; |test|done~7          ; |test|done~7          ; out              ;
+; |test|done~8          ; |test|done~8          ; out              ;
+; |test|done~9          ; |test|done~9          ; out              ;
+; |test|done[7]         ; |test|done[7]         ; regout           ;
+; |test|done~10         ; |test|done~10         ; out              ;
+; |test|done~11         ; |test|done~11         ; out              ;
+; |test|done~12         ; |test|done~12         ; out              ;
+; |test|done~13         ; |test|done~13         ; out              ;
+; |test|done[6]         ; |test|done[6]         ; regout           ;
+; |test|done~14         ; |test|done~14         ; out              ;
+; |test|done~15         ; |test|done~15         ; out              ;
+; |test|done~16         ; |test|done~16         ; out              ;
+; |test|done~17         ; |test|done~17         ; out              ;
+; |test|done[5]         ; |test|done[5]         ; regout           ;
+; |test|done~18         ; |test|done~18         ; out              ;
+; |test|done~19         ; |test|done~19         ; out              ;
+; |test|done~20         ; |test|done~20         ; out              ;
+; |test|done~21         ; |test|done~21         ; out              ;
+; |test|done[4]         ; |test|done[4]         ; regout           ;
+; |test|done~22         ; |test|done~22         ; out              ;
+; |test|done~23         ; |test|done~23         ; out              ;
+; |test|done~24         ; |test|done~24         ; out              ;
+; |test|done~25         ; |test|done~25         ; out              ;
+; |test|done[3]         ; |test|done[3]         ; regout           ;
+; |test|done~26         ; |test|done~26         ; out              ;
+; |test|done~27         ; |test|done~27         ; out              ;
+; |test|done~28         ; |test|done~28         ; out              ;
+; |test|done~29         ; |test|done~29         ; out              ;
+; |test|done[2]         ; |test|done[2]         ; regout           ;
+; |test|done~30         ; |test|done~30         ; out              ;
+; |test|done~31         ; |test|done~31         ; out              ;
+; |test|done[1]         ; |test|done[1]         ; regout           ;
+; |test|outbuf~7        ; |test|outbuf~7        ; out              ;
+; |test|outbuf~8        ; |test|outbuf~8        ; out              ;
+; |test|outbuf~9        ; |test|outbuf~9        ; out              ;
+; |test|outbuf~10       ; |test|outbuf~10       ; out              ;
+; |test|done[0]         ; |test|done[0]         ; regout           ;
+; |test|outbuf~11       ; |test|outbuf~11       ; out              ;
+; |test|outbuf~12       ; |test|outbuf~12       ; out              ;
+; |test|outbuf~13       ; |test|outbuf~13       ; out              ;
+; |test|outbuf~14       ; |test|outbuf~14       ; out              ;
+; |test|outbuf~15       ; |test|outbuf~15       ; out              ;
+; |test|outbuf~16       ; |test|outbuf~16       ; out              ;
+; |test|outbuf~17       ; |test|outbuf~17       ; out              ;
+; |test|outbuf~18       ; |test|outbuf~18       ; out              ;
+; |test|outbuf~19       ; |test|outbuf~19       ; out              ;
+; |test|outbuf~20       ; |test|outbuf~20       ; out              ;
+; |test|dataout~4       ; |test|dataout~4       ; out              ;
+; |test|dataout~5       ; |test|dataout~5       ; out              ;
+; |test|dataout~6       ; |test|dataout~6       ; out              ;
+; |test|dataout~7       ; |test|dataout~7       ; out              ;
+; |test|state.finish    ; |test|state.finish    ; regout           ;
+; |test|done[16]        ; |test|done[16]        ; regout           ;
+; |test|done[17]        ; |test|done[17]        ; regout           ;
+; |test|done[18]        ; |test|done[18]        ; regout           ;
+; |test|done[19]        ; |test|done[19]        ; regout           ;
+; |test|done[20]        ; |test|done[20]        ; regout           ;
+; |test|done[21]        ; |test|done[21]        ; regout           ;
+; |test|done[22]        ; |test|done[22]        ; regout           ;
+; |test|done[23]        ; |test|done[23]        ; regout           ;
+; |test|done[24]        ; |test|done[24]        ; regout           ;
+; |test|done[25]        ; |test|done[25]        ; regout           ;
+; |test|done[26]        ; |test|done[26]        ; regout           ;
+; |test|done[27]        ; |test|done[27]        ; regout           ;
+; |test|done[28]        ; |test|done[28]        ; regout           ;
+; |test|done[29]        ; |test|done[29]        ; regout           ;
+; |test|done[30]        ; |test|done[30]        ; regout           ;
+; |test|done[31]        ; |test|done[31]        ; regout           ;
+; |test|rout[0]         ; |test|rout[0]         ; regout           ;
+; |test|rout[1]         ; |test|rout[1]         ; regout           ;
+; |test|rout[2]         ; |test|rout[2]         ; regout           ;
+; |test|index[0]        ; |test|index[0]        ; regout           ;
+; |test|index[2]        ; |test|index[2]        ; regout           ;
+; |test|index[3]        ; |test|index[3]        ; regout           ;
+; |test|index[4]        ; |test|index[4]        ; regout           ;
+; |test|index[5]        ; |test|index[5]        ; regout           ;
+; |test|index[6]        ; |test|index[6]        ; regout           ;
+; |test|index[7]        ; |test|index[7]        ; regout           ;
+; |test|index[8]        ; |test|index[8]        ; regout           ;
+; |test|index[9]        ; |test|index[9]        ; regout           ;
+; |test|index[10]       ; |test|index[10]       ; regout           ;
+; |test|index[11]       ; |test|index[11]       ; regout           ;
+; |test|index[12]       ; |test|index[12]       ; regout           ;
+; |test|index[13]       ; |test|index[13]       ; regout           ;
+; |test|index[14]       ; |test|index[14]       ; regout           ;
+; |test|index[15]       ; |test|index[15]       ; regout           ;
+; |test|index[16]       ; |test|index[16]       ; regout           ;
+; |test|index[17]       ; |test|index[17]       ; regout           ;
+; |test|index[18]       ; |test|index[18]       ; regout           ;
+; |test|index[19]       ; |test|index[19]       ; regout           ;
+; |test|index[20]       ; |test|index[20]       ; regout           ;
+; |test|index[21]       ; |test|index[21]       ; regout           ;
+; |test|index[22]       ; |test|index[22]       ; regout           ;
+; |test|index[23]       ; |test|index[23]       ; regout           ;
+; |test|index[24]       ; |test|index[24]       ; regout           ;
+; |test|index[25]       ; |test|index[25]       ; regout           ;
+; |test|index[26]       ; |test|index[26]       ; regout           ;
+; |test|index[27]       ; |test|index[27]       ; regout           ;
+; |test|index[28]       ; |test|index[28]       ; regout           ;
+; |test|index[29]       ; |test|index[29]       ; regout           ;
+; |test|index[30]       ; |test|index[30]       ; regout           ;
+; |test|index[31]       ; |test|index[31]       ; regout           ;
+; |test|databuf[0]      ; |test|databuf[0]      ; regout           ;
+; |test|databuf[1]      ; |test|databuf[1]      ; regout           ;
+; |test|databuf[2]      ; |test|databuf[2]      ; regout           ;
+; |test|databuf[3]      ; |test|databuf[3]      ; regout           ;
+; |test|databuf[4]      ; |test|databuf[4]      ; regout           ;
+; |test|databuf[5]      ; |test|databuf[5]      ; regout           ;
+; |test|databuf[6]      ; |test|databuf[6]      ; regout           ;
+; |test|outbuf[0]~reg0  ; |test|outbuf[0]~reg0  ; regout           ;
+; |test|outbuf[1]~reg0  ; |test|outbuf[1]~reg0  ; regout           ;
+; |test|outbuf[2]~reg0  ; |test|outbuf[2]~reg0  ; regout           ;
+; |test|outbuf[3]~reg0  ; |test|outbuf[3]~reg0  ; regout           ;
+; |test|outbuf[4]~reg0  ; |test|outbuf[4]~reg0  ; regout           ;
+; |test|outbuf[5]~reg0  ; |test|outbuf[5]~reg0  ; regout           ;
+; |test|outbuf[6]~reg0  ; |test|outbuf[6]~reg0  ; regout           ;
+; |test|dataout[0]~reg0 ; |test|dataout[0]~reg0 ; regout           ;
+; |test|dataout[1]~reg0 ; |test|dataout[1]~reg0 ; regout           ;
+; |test|dataout[2]~reg0 ; |test|dataout[2]~reg0 ; regout           ;
+; |test|dataout[3]~reg0 ; |test|dataout[3]~reg0 ; regout           ;
+; |test|state.compute   ; |test|state.compute   ; regout           ;
+; |test|state.00        ; |test|state.00        ; regout           ;
+; |test|start           ; |test|start           ; out              ;
+; |test|d_finish        ; |test|d_finish        ; out              ;
+; |test|datain          ; |test|datain          ; out              ;
+; |test|outbuf[0]       ; |test|outbuf[0]       ; pin_out          ;
+; |test|outbuf[1]       ; |test|outbuf[1]       ; pin_out          ;
+; |test|outbuf[2]       ; |test|outbuf[2]       ; pin_out          ;
+; |test|outbuf[3]       ; |test|outbuf[3]       ; pin_out          ;
+; |test|outbuf[4]       ; |test|outbuf[4]       ; pin_out          ;
+; |test|outbuf[5]       ; |test|outbuf[5]       ; pin_out          ;
+; |test|outbuf[6]       ; |test|outbuf[6]       ; pin_out          ;
+; |test|dataout[0]      ; |test|dataout[0]      ; pin_out          ;
+; |test|dataout[1]      ; |test|dataout[1]      ; pin_out          ;
+; |test|dataout[2]      ; |test|dataout[2]      ; pin_out          ;
+; |test|dataout[3]      ; |test|dataout[3]      ; pin_out          ;
+; |test|state.00~0      ; |test|state.00~0      ; out0             ;
+; |test|state~3         ; |test|state~3         ; out0             ;
+; |test|Selector0~0     ; |test|Selector0~0     ; out0             ;
+; |test|Selector0~1     ; |test|Selector0~1     ; out0             ;
+; |test|Selector0~2     ; |test|Selector0~2     ; out0             ;
+; |test|Selector0~3     ; |test|Selector0~3     ; out0             ;
+; |test|Selector0~4     ; |test|Selector0~4     ; out0             ;
+; |test|Selector1~0     ; |test|Selector1~0     ; out0             ;
+; |test|Selector1~1     ; |test|Selector1~1     ; out0             ;
+; |test|Selector2~0     ; |test|Selector2~0     ; out              ;
+; |test|Selector2~1     ; |test|Selector2~1     ; out              ;
+; |test|Selector5~0     ; |test|Selector5~0     ; out0             ;
+; |test|Selector5~1     ; |test|Selector5~1     ; out0             ;
+; |test|Selector5~2     ; |test|Selector5~2     ; out0             ;
+; |test|Selector6~0     ; |test|Selector6~0     ; out0             ;
+; |test|Selector6~1     ; |test|Selector6~1     ; out0             ;
+; |test|Selector6~2     ; |test|Selector6~2     ; out0             ;
+; |test|Selector7~0     ; |test|Selector7~0     ; out0             ;
+; |test|Selector7~1     ; |test|Selector7~1     ; out0             ;
+; |test|Selector7~2     ; |test|Selector7~2     ; out0             ;
+; |test|Selector8~0     ; |test|Selector8~0     ; out0             ;
+; |test|Selector8~1     ; |test|Selector8~1     ; out0             ;
+; |test|Selector8~2     ; |test|Selector8~2     ; out0             ;
+; |test|Selector9~0     ; |test|Selector9~0     ; out0             ;
+; |test|Selector9~1     ; |test|Selector9~1     ; out0             ;
+; |test|Selector9~2     ; |test|Selector9~2     ; out0             ;
+; |test|Selector10~0    ; |test|Selector10~0    ; out0             ;
+; |test|Selector10~1    ; |test|Selector10~1    ; out0             ;
+; |test|Selector10~2    ; |test|Selector10~2    ; out0             ;
+; |test|Selector11~0    ; |test|Selector11~0    ; out0             ;
+; |test|Selector11~1    ; |test|Selector11~1    ; out0             ;
+; |test|Selector11~2    ; |test|Selector11~2    ; out0             ;
+; |test|Selector12~0    ; |test|Selector12~0    ; out0             ;
+; |test|Selector12~1    ; |test|Selector12~1    ; out0             ;
+; |test|Selector12~2    ; |test|Selector12~2    ; out0             ;
+; |test|Selector13~0    ; |test|Selector13~0    ; out0             ;
+; |test|Selector13~1    ; |test|Selector13~1    ; out0             ;
+; |test|Selector13~2    ; |test|Selector13~2    ; out0             ;
+; |test|Selector14~0    ; |test|Selector14~0    ; out0             ;
+; |test|Selector14~1    ; |test|Selector14~1    ; out0             ;
+; |test|Selector14~2    ; |test|Selector14~2    ; out0             ;
+; |test|Selector15~0    ; |test|Selector15~0    ; out0             ;
+; |test|Selector15~1    ; |test|Selector15~1    ; out0             ;
+; |test|Selector15~2    ; |test|Selector15~2    ; out0             ;
+; |test|Selector16~0    ; |test|Selector16~0    ; out0             ;
+; |test|Selector16~1    ; |test|Selector16~1    ; out0             ;
+; |test|Selector16~2    ; |test|Selector16~2    ; out0             ;
+; |test|Selector17~0    ; |test|Selector17~0    ; out0             ;
+; |test|Selector17~1    ; |test|Selector17~1    ; out0             ;
+; |test|Selector17~2    ; |test|Selector17~2    ; out0             ;
+; |test|Selector18~0    ; |test|Selector18~0    ; out0             ;
+; |test|Selector18~1    ; |test|Selector18~1    ; out0             ;
+; |test|Selector18~2    ; |test|Selector18~2    ; out0             ;
+; |test|Selector19~0    ; |test|Selector19~0    ; out0             ;
+; |test|Selector19~1    ; |test|Selector19~1    ; out0             ;
+; |test|Selector19~2    ; |test|Selector19~2    ; out0             ;
+; |test|Selector20~0    ; |test|Selector20~0    ; out0             ;
+; |test|Selector20~1    ; |test|Selector20~1    ; out0             ;
+; |test|Selector20~2    ; |test|Selector20~2    ; out0             ;
+; |test|Selector21~0    ; |test|Selector21~0    ; out0             ;
+; |test|Selector21~1    ; |test|Selector21~1    ; out0             ;
+; |test|Selector21~2    ; |test|Selector21~2    ; out0             ;
+; |test|Selector22~0    ; |test|Selector22~0    ; out0             ;
+; |test|Selector22~1    ; |test|Selector22~1    ; out0             ;
+; |test|Selector22~2    ; |test|Selector22~2    ; out0             ;
+; |test|Selector23~0    ; |test|Selector23~0    ; out0             ;
+; |test|Selector23~1    ; |test|Selector23~1    ; out0             ;
+; |test|Selector23~2    ; |test|Selector23~2    ; out0             ;
+; |test|Selector24~0    ; |test|Selector24~0    ; out0             ;
+; |test|Selector24~1    ; |test|Selector24~1    ; out0             ;
+; |test|Selector24~2    ; |test|Selector24~2    ; out0             ;
+; |test|Selector25~0    ; |test|Selector25~0    ; out0             ;
+; |test|Selector25~1    ; |test|Selector25~1    ; out0             ;
+; |test|Selector25~2    ; |test|Selector25~2    ; out0             ;
+; |test|Selector26~0    ; |test|Selector26~0    ; out0             ;
+; |test|Selector26~1    ; |test|Selector26~1    ; out0             ;
+; |test|Selector26~2    ; |test|Selector26~2    ; out0             ;
+; |test|Selector27~0    ; |test|Selector27~0    ; out0             ;
+; |test|Selector27~1    ; |test|Selector27~1    ; out0             ;
+; |test|Selector27~2    ; |test|Selector27~2    ; out0             ;
+; |test|Selector28~0    ; |test|Selector28~0    ; out0             ;
+; |test|Selector28~1    ; |test|Selector28~1    ; out0             ;
+; |test|Selector28~2    ; |test|Selector28~2    ; out0             ;
+; |test|Selector29~0    ; |test|Selector29~0    ; out0             ;
+; |test|Selector29~1    ; |test|Selector29~1    ; out0             ;
+; |test|Selector29~2    ; |test|Selector29~2    ; out0             ;
+; |test|Selector30~0    ; |test|Selector30~0    ; out0             ;
+; |test|Selector30~1    ; |test|Selector30~1    ; out0             ;
+; |test|Selector30~2    ; |test|Selector30~2    ; out0             ;
+; |test|Selector31~0    ; |test|Selector31~0    ; out0             ;
+; |test|Selector31~1    ; |test|Selector31~1    ; out0             ;
+; |test|Selector31~2    ; |test|Selector31~2    ; out0             ;
+; |test|Selector32~0    ; |test|Selector32~0    ; out0             ;
+; |test|Selector32~1    ; |test|Selector32~1    ; out0             ;
+; |test|Selector32~2    ; |test|Selector32~2    ; out0             ;
+; |test|Selector33~0    ; |test|Selector33~0    ; out0             ;
+; |test|Selector33~1    ; |test|Selector33~1    ; out0             ;
+; |test|Selector33~2    ; |test|Selector33~2    ; out0             ;
+; |test|Selector34~0    ; |test|Selector34~0    ; out0             ;
+; |test|Selector34~1    ; |test|Selector34~1    ; out0             ;
+; |test|Selector34~2    ; |test|Selector34~2    ; out0             ;
+; |test|Selector35~0    ; |test|Selector35~0    ; out0             ;
+; |test|Selector35~1    ; |test|Selector35~1    ; out0             ;
+; |test|Selector35~2    ; |test|Selector35~2    ; out0             ;
+; |test|Selector36~0    ; |test|Selector36~0    ; out0             ;
+; |test|Selector36~1    ; |test|Selector36~1    ; out0             ;
+; |test|Selector36~2    ; |test|Selector36~2    ; out0             ;
+; |test|Decoder0~0      ; |test|Decoder0~0      ; out0             ;
+; |test|Decoder0~1      ; |test|Decoder0~1      ; out0             ;
+; |test|Decoder0~2      ; |test|Decoder0~2      ; out0             ;
+; |test|Decoder0~3      ; |test|Decoder0~3      ; out0             ;
+; |test|Decoder0~4      ; |test|Decoder0~4      ; out0             ;
+; |test|Decoder0~5      ; |test|Decoder0~5      ; out0             ;
+; |test|Decoder1~0      ; |test|Decoder1~0      ; out0             ;
+; |test|Decoder1~1      ; |test|Decoder1~1      ; out0             ;
+; |test|Decoder1~2      ; |test|Decoder1~2      ; out0             ;
+; |test|Decoder1~3      ; |test|Decoder1~3      ; out0             ;
+; |test|Decoder1~4      ; |test|Decoder1~4      ; out0             ;
+; |test|Decoder1~5      ; |test|Decoder1~5      ; out0             ;
+; |test|Decoder1~6      ; |test|Decoder1~6      ; out0             ;
+; |test|LessThan0~0     ; |test|LessThan0~0     ; out0             ;
+; |test|LessThan0~1     ; |test|LessThan0~1     ; out0             ;
+; |test|LessThan0~2     ; |test|LessThan0~2     ; out0             ;
+; |test|LessThan0~3     ; |test|LessThan0~3     ; out0             ;
+; |test|LessThan0~4     ; |test|LessThan0~4     ; out0             ;
+; |test|LessThan0~5     ; |test|LessThan0~5     ; out0             ;
+; |test|LessThan0~6     ; |test|LessThan0~6     ; out0             ;
+; |test|LessThan0~7     ; |test|LessThan0~7     ; out0             ;
+; |test|LessThan0~8     ; |test|LessThan0~8     ; out0             ;
+; |test|LessThan0~9     ; |test|LessThan0~9     ; out0             ;
+; |test|LessThan0~10    ; |test|LessThan0~10    ; out0             ;
+; |test|LessThan0~11    ; |test|LessThan0~11    ; out0             ;
+; |test|LessThan0~12    ; |test|LessThan0~12    ; out0             ;
+; |test|LessThan0~13    ; |test|LessThan0~13    ; out0             ;
+; |test|LessThan0~14    ; |test|LessThan0~14    ; out0             ;
+; |test|LessThan0~15    ; |test|LessThan0~15    ; out0             ;
+; |test|LessThan0~16    ; |test|LessThan0~16    ; out0             ;
+; |test|LessThan0~17    ; |test|LessThan0~17    ; out0             ;
+; |test|LessThan0~18    ; |test|LessThan0~18    ; out0             ;
+; |test|LessThan0~19    ; |test|LessThan0~19    ; out0             ;
+; |test|LessThan0~20    ; |test|LessThan0~20    ; out0             ;
+; |test|LessThan0~21    ; |test|LessThan0~21    ; out0             ;
+; |test|LessThan0~22    ; |test|LessThan0~22    ; out0             ;
+; |test|LessThan0~23    ; |test|LessThan0~23    ; out0             ;
+; |test|LessThan0~24    ; |test|LessThan0~24    ; out0             ;
+; |test|LessThan0~25    ; |test|LessThan0~25    ; out0             ;
+; |test|LessThan0~26    ; |test|LessThan0~26    ; out0             ;
+; |test|LessThan0~27    ; |test|LessThan0~27    ; out0             ;
+; |test|LessThan0~28    ; |test|LessThan0~28    ; out0             ;
+; |test|LessThan0~29    ; |test|LessThan0~29    ; out0             ;
+; |test|LessThan0~30    ; |test|LessThan0~30    ; out0             ;
+; |test|LessThan0~31    ; |test|LessThan0~31    ; out0             ;
+; |test|LessThan0~32    ; |test|LessThan0~32    ; out0             ;
+; |test|LessThan0~33    ; |test|LessThan0~33    ; out0             ;
+; |test|LessThan0~34    ; |test|LessThan0~34    ; out0             ;
+; |test|LessThan0~35    ; |test|LessThan0~35    ; out0             ;
+; |test|LessThan0~36    ; |test|LessThan0~36    ; out0             ;
+; |test|LessThan0~37    ; |test|LessThan0~37    ; out0             ;
+; |test|LessThan0~38    ; |test|LessThan0~38    ; out0             ;
+; |test|LessThan0~39    ; |test|LessThan0~39    ; out0             ;
+; |test|LessThan0~40    ; |test|LessThan0~40    ; out0             ;
+; |test|LessThan0~41    ; |test|LessThan0~41    ; out0             ;
+; |test|LessThan0~42    ; |test|LessThan0~42    ; out0             ;
+; |test|LessThan0~43    ; |test|LessThan0~43    ; out0             ;
+; |test|LessThan0~44    ; |test|LessThan0~44    ; out0             ;
+; |test|LessThan0~45    ; |test|LessThan0~45    ; out0             ;
+; |test|LessThan0~46    ; |test|LessThan0~46    ; out0             ;
+; |test|LessThan0~47    ; |test|LessThan0~47    ; out0             ;
+; |test|LessThan0~48    ; |test|LessThan0~48    ; out0             ;
+; |test|LessThan0~49    ; |test|LessThan0~49    ; out0             ;
+; |test|LessThan0~50    ; |test|LessThan0~50    ; out0             ;
+; |test|LessThan0~51    ; |test|LessThan0~51    ; out0             ;
+; |test|LessThan0~52    ; |test|LessThan0~52    ; out0             ;
+; |test|Add0~0          ; |test|Add0~0          ; out0             ;
+; |test|Add0~1          ; |test|Add0~1          ; out0             ;
+; |test|Add0~2          ; |test|Add0~2          ; out0             ;
+; |test|Add0~3          ; |test|Add0~3          ; out0             ;
+; |test|Add0~4          ; |test|Add0~4          ; out0             ;
+; |test|Add0~5          ; |test|Add0~5          ; out0             ;
+; |test|Add0~6          ; |test|Add0~6          ; out0             ;
+; |test|Add0~7          ; |test|Add0~7          ; out0             ;
+; |test|Add0~8          ; |test|Add0~8          ; out0             ;
+; |test|Add0~9          ; |test|Add0~9          ; out0             ;
+; |test|Add0~10         ; |test|Add0~10         ; out0             ;
+; |test|Add0~11         ; |test|Add0~11         ; out0             ;
+; |test|Add0~12         ; |test|Add0~12         ; out0             ;
+; |test|Add0~13         ; |test|Add0~13         ; out0             ;
+; |test|Add0~14         ; |test|Add0~14         ; out0             ;
+; |test|Add0~15         ; |test|Add0~15         ; out0             ;
+; |test|Add0~16         ; |test|Add0~16         ; out0             ;
+; |test|Add0~17         ; |test|Add0~17         ; out0             ;
+; |test|Add0~18         ; |test|Add0~18         ; out0             ;
+; |test|Add0~19         ; |test|Add0~19         ; out0             ;
+; |test|Add0~20         ; |test|Add0~20         ; out0             ;
+; |test|Add0~21         ; |test|Add0~21         ; out0             ;
+; |test|Add0~22         ; |test|Add0~22         ; out0             ;
+; |test|Add0~23         ; |test|Add0~23         ; out0             ;
+; |test|Add0~24         ; |test|Add0~24         ; out0             ;
+; |test|Add0~25         ; |test|Add0~25         ; out0             ;
+; |test|Add0~26         ; |test|Add0~26         ; out0             ;
+; |test|Add0~27         ; |test|Add0~27         ; out0             ;
+; |test|Add0~28         ; |test|Add0~28         ; out0             ;
+; |test|Add0~29         ; |test|Add0~29         ; out0             ;
+; |test|Add0~30         ; |test|Add0~30         ; out0             ;
+; |test|Add0~31         ; |test|Add0~31         ; out0             ;
+; |test|Add0~32         ; |test|Add0~32         ; out0             ;
+; |test|Add0~33         ; |test|Add0~33         ; out0             ;
+; |test|Add0~34         ; |test|Add0~34         ; out0             ;
+; |test|Add0~35         ; |test|Add0~35         ; out0             ;
+; |test|Add0~36         ; |test|Add0~36         ; out0             ;
+; |test|Add0~37         ; |test|Add0~37         ; out0             ;
+; |test|Add0~38         ; |test|Add0~38         ; out0             ;
+; |test|Add0~39         ; |test|Add0~39         ; out0             ;
+; |test|Add0~40         ; |test|Add0~40         ; out0             ;
+; |test|Add0~41         ; |test|Add0~41         ; out0             ;
+; |test|Add0~42         ; |test|Add0~42         ; out0             ;
+; |test|Add0~43         ; |test|Add0~43         ; out0             ;
+; |test|Add0~44         ; |test|Add0~44         ; out0             ;
+; |test|Add0~45         ; |test|Add0~45         ; out0             ;
+; |test|Add0~46         ; |test|Add0~46         ; out0             ;
+; |test|Add0~47         ; |test|Add0~47         ; out0             ;
+; |test|Add0~48         ; |test|Add0~48         ; out0             ;
+; |test|Add0~49         ; |test|Add0~49         ; out0             ;
+; |test|Add0~50         ; |test|Add0~50         ; out0             ;
+; |test|Add0~51         ; |test|Add0~51         ; out0             ;
+; |test|Add0~52         ; |test|Add0~52         ; out0             ;
+; |test|Add0~53         ; |test|Add0~53         ; out0             ;
+; |test|Add0~54         ; |test|Add0~54         ; out0             ;
+; |test|Add0~55         ; |test|Add0~55         ; out0             ;
+; |test|Add0~56         ; |test|Add0~56         ; out0             ;
+; |test|Add0~57         ; |test|Add0~57         ; out0             ;
+; |test|Add0~58         ; |test|Add0~58         ; out0             ;
+; |test|Add0~59         ; |test|Add0~59         ; out0             ;
+; |test|Add0~60         ; |test|Add0~60         ; out0             ;
+; |test|Add0~61         ; |test|Add0~61         ; out0             ;
+; |test|Add0~62         ; |test|Add0~62         ; out0             ;
+; |test|Add0~63         ; |test|Add0~63         ; out0             ;
+; |test|Add0~64         ; |test|Add0~64         ; out0             ;
+; |test|Add0~65         ; |test|Add0~65         ; out0             ;
+; |test|Add0~66         ; |test|Add0~66         ; out0             ;
+; |test|Add0~67         ; |test|Add0~67         ; out0             ;
+; |test|Add0~68         ; |test|Add0~68         ; out0             ;
+; |test|Add0~69         ; |test|Add0~69         ; out0             ;
+; |test|Add0~70         ; |test|Add0~70         ; out0             ;
+; |test|Add0~71         ; |test|Add0~71         ; out0             ;
+; |test|Add0~72         ; |test|Add0~72         ; out0             ;
+; |test|Add0~73         ; |test|Add0~73         ; out0             ;
+; |test|Add0~74         ; |test|Add0~74         ; out0             ;
+; |test|Add0~75         ; |test|Add0~75         ; out0             ;
+; |test|Add0~76         ; |test|Add0~76         ; out0             ;
+; |test|Add0~77         ; |test|Add0~77         ; out0             ;
+; |test|Add0~78         ; |test|Add0~78         ; out0             ;
+; |test|Add0~79         ; |test|Add0~79         ; out0             ;
+; |test|Add0~80         ; |test|Add0~80         ; out0             ;
+; |test|Add0~81         ; |test|Add0~81         ; out0             ;
+; |test|Add0~82         ; |test|Add0~82         ; out0             ;
+; |test|Add0~83         ; |test|Add0~83         ; out0             ;
+; |test|Add0~84         ; |test|Add0~84         ; out0             ;
+; |test|Add0~85         ; |test|Add0~85         ; out0             ;
+; |test|Add0~86         ; |test|Add0~86         ; out0             ;
+; |test|Add0~87         ; |test|Add0~87         ; out0             ;
+; |test|Add0~88         ; |test|Add0~88         ; out0             ;
+; |test|Add0~89         ; |test|Add0~89         ; out0             ;
+; |test|Add0~90         ; |test|Add0~90         ; out0             ;
+; |test|Equal0~0        ; |test|Equal0~0        ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Jun 24 17:08:07 2020
+Info: Command: quartus_sim --simulation_results_format=VWF test -c test
+Info (324025): Using vector source file "C:/Users/Sce_dio/Desktop/EDA_3/decode/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       2.41 %
+Info (328052): Number of transitions in simulation is 293
+Info (324045): Vector file test.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4465 megabytes
+    Info: Processing ended: Wed Jun 24 17:08:07 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,53 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Sce_dio/Desktop/EDA_2/simulation/modelsim
+vTest_2
+Z1 !s110 1592989100
+!i10b 1
+!s100 fRFGPcU4J5JRNc83W5_M@2
+I]RZ2?em1jYW=hU8=Md1O?3
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1592699018
+8C:/Users/Sce_dio/Desktop/EDA_2/Test_2.v
+FC:/Users/Sce_dio/Desktop/EDA_2/Test_2.v
+L0 2
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1592989100.458000
+!s107 C:/Users/Sce_dio/Desktop/EDA_2/Test_2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sce_dio/Desktop/EDA_2|C:/Users/Sce_dio/Desktop/EDA_2/Test_2.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/Sce_dio/Desktop/EDA_2
+n@test_2
+vtest_syn_frame_search
+R1
+!i10b 1
+!s100 MYGkfel;GmYgiTkLL5<>:3
+I3]g0LV0T`M5oiKA7c4T3>1
+R2
+R0
+w1592699062
+8C:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v
+FC:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1592989100.563000
+!s107 C:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Sce_dio/Desktop/EDA_2|C:/Users/Sce_dio/Desktop/EDA_2/test_syn_frame_search.v|
+!i113 1
+R4
+R5

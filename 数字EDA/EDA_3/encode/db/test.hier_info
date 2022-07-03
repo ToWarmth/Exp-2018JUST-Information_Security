@@ -1,0 +1,24 @@
+|test
+clk => dataout~reg0.CLK
+clk => cyclic_reg[0].CLK
+clk => cyclic_reg[1].CLK
+clk => cyclic_reg[2].CLK
+rst => cyclic_reg[0].ACLR
+rst => cyclic_reg[1].ACLR
+rst => cyclic_reg[2].ACLR
+rst => count[0].ACLR
+rst => count[1].ACLR
+rst => state.finish_94.ACLR
+rst => state.compute_101.ACLR
+rst => state.idle_108.PRESET
+rst => dataout~reg0.ENA
+start => Selector3.IN2
+start => Selector2.IN2
+d_finish => Selector4.IN1
+d_finish => Selector3.IN1
+datain => cyclic_reg~0.IN1
+datain => cyclic_reg~2.IN1
+datain => Selector1.IN0
+dataout <= dataout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

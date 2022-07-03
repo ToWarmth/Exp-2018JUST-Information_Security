@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Sce_dio/Desktop/EDA_1/Test_1.v
+source_file = 1, C:/Users/Sce_dio/Desktop/EDA_1/Waveform.vwf
+source_file = 1, C:/Users/Sce_dio/Desktop/EDA_1/Waveform1.vwf
+source_file = 1, C:/Users/Sce_dio/Desktop/EDA_1/Verilog1.v
+source_file = 1, C:/Users/Sce_dio/Desktop/EDA_1/Waveform2.vwf
+source_file = 1, C:/Users/Sce_dio/Desktop/EDA_1/db/Test_1.cbx.xml
+design_name = Test_1
+instance = comp, \datain~I , datain, Test_1, 1
+instance = comp, \clk~I , clk, Test_1, 1
+instance = comp, \clk~clkctrl , clk~clkctrl, Test_1, 1
+instance = comp, \flag~0 , flag~0, Test_1, 1
+instance = comp, \com[0]~0 , com[0]~0, Test_1, 1
+instance = comp, \com[0] , com[0], Test_1, 1
+instance = comp, \dataout~0 , dataout~0, Test_1, 1
+instance = comp, \dataout~reg0 , dataout~reg0, Test_1, 1
+instance = comp, \dataout~I , dataout, Test_1, 1

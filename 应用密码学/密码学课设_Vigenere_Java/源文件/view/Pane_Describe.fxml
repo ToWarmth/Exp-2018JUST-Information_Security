@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SecretDesign.controller.Pane_Describe_Con">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <MenuBar fx:id="menubar" GridPane.columnSpan="11">
+            <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#clickPrevious" text="上一步" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#clickNext" text="下一步" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#clickExit" text="退出" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="控制">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#click_main" text="主界面" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_History" text="Vigenere密码历史" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_Describe" text="Vigenere密码描述" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_CrackingMethod" text="Vigenere密码破译方法" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_EnandDe" text="Vigenere加/解密" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#click_Instruction" text="使用说明" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_FurtherStudy" text="密码深入学习" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TextArea editable="false" prefHeight="455.0" prefWidth="970.0" text="在一个凯撒密码中，字母表中的每一字母都会作一定的偏移，例如偏移量为3时，A就转换为了D、B转换为了E……而维吉尼亚密码则是由一些偏移量不同的恺撒密码组成。&#10;为了生成密码，需要使用表格法。这一表格包括了26行字母表，每一行都由前一行向左偏移一位得到。具体使用哪一行字母表进行编译是基于密钥进行的，在过程中会不断地变换。&#10;例如，假设明文为：ATTACKATDAWN。选择某一关键词并重复而得到密钥，如关键词为LEMON时，密钥为：LEMONLEMONLE。对于明文的第一个字母A，对应密钥的第一个字母L，于是使用表格中L行字母表进行加密，得到密文第一个字母L。类似地，明文第二个字母为T，在表格中使用对应的E行进行加密，得到密文第二个字母X。以此类推，可以得到：&#10;明文：ATTACKATDAWN&#10;密钥：LEMONLEMONLE&#10;密文：LXFOPVEFRNHR&#10;解密的过程则与加密相反。例如：根据密钥第一个字母L所对应的L行字母表，发现密文第一个字母L位于A列，因而明文第一个字母为A。密钥第二个字母E对应E行字母表，而密文第二个字母X位于此行T列，因而明文第二个字母为T。以此类推便可得到明文。&#10;用数字0-25代替字母A-Z，维吉尼亚密码的加密文法可以写成同余的形式：&#10;密文的第i位与明文第i位加上密钥第i位模26同余。&#10;解密方法则能写成：&#10;明文的第i位与密文第i位减去密钥第i位模26同余。&#10;&#10;&#10;In a Caesar cipher, each letter in the alphabet will be offset by a certain amount. For example, when the offset is 3, A is converted to D, B is converted to E... and the Virginia cipher is composed of some Caesar code with different offsets. In order to generate a password, you need to use the table method. This table contains 26 rows of alphabets, each row is obtained by shifting the previous row one bit to the left. The specific line of alphabet used to compile is based on the key, which will be constantly changed in the process. For example, suppose the plain text is: ATTACKATDAWN. Select a keyword and repeat to get the key. If the keyword is LEMON, the key is: LEMONLEMONLE. For the first letter A of the plaintext, which corresponds to the first letter L of the key, then use the L-line alphabet in the table to encrypt, to get the first letter L of the ciphertext. Similarly, the second letter of the plain text is T, and the corresponding E line is used for encryption in the table to obtain the second letter X of the cipher text. By analogy, you can get: Plain text: ATTACKATDAWN Key: LEMONLEMONLE Cipher text: LXFOPVEFRNHR The decryption process is the opposite of encryption. For example, according to the L-line alphabet corresponding to the first letter L of the key, the first letter L of the ciphertext is found in column A, so the first letter of the plaintext is A. The second letter E of the key corresponds to the E-row alphabet, and the second letter X of the ciphertext is located in column T of this row, so the second letter of the plaintext is T. By analogy, the plain text can be obtained. Instead of the letters A-Z with numbers 0-25, the encryption grammar of the Virginia password can be written in the form of congruence: the i-th bit of the ciphertext is the same as the i-th bit of the plaintext plus the i-th bit of the key modulo 26 congruence. The decryption method can be written as: The i-th bit of the plaintext is the same as the i-th bit of the ciphertext minus the i-th bit of the key modulo 26.&#10;&#10;                                                                                                                                                                                   " wrapText="true" GridPane.columnSpan="11" GridPane.rowIndex="4" GridPane.rowSpan="21">
+            <GridPane.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </GridPane.margin>
+        </TextArea>
+        <TextField alignment="CENTER" editable="false" prefHeight="45.0" prefWidth="970.0" text="Vigenere密码描述" GridPane.columnSpan="11" GridPane.rowIndex="2" GridPane.rowSpan="2">
+            <GridPane.margin>
+                <Insets left="15.0" right="15.0" />
+            </GridPane.margin>
+            <font>
+                <Font size="24.0" />
+            </font>
+        </TextField>
+    </children>
+</GridPane>

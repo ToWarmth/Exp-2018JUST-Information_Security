@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SecretDesign.controller.Pane_History_Con">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <MenuBar fx:id="menubar" GridPane.columnSpan="11">
+            <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#clickPrevious" text="上一步" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#clickNext" text="下一步" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#clickExit" text="退出" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="控制">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#click_main" text="主界面" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_History" text="Vigenere密码历史" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_Describe" text="Vigenere密码描述" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_CrackingMethod" text="Vigenere密码破译方法" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_EnandDe" text="Vigenere加/解密" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#click_Instruction" text="使用说明" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_FurtherStudy" text="密码深入学习" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <TextArea editable="false" prefHeight="455.0" prefWidth="970.0" text="1.维吉尼亚密码（又译维热纳尔密码）是使用一系列凯撒密码组成密码字母表的加密算法，属于多表密码的一种简单形式。&#10;2.维吉尼亚密码曾多次被发明。该方法最早记录在吉奥万·巴蒂斯塔·贝拉索于1553年所著的书《吉奥万·巴蒂斯塔·贝拉索先生的密码》中。然而，后来在19世纪时被误传为是法国外交官布莱斯·德·维吉尼亚所创造，因此现在被称为“维吉尼亚密码”。&#10;维吉尼亚密码以其简单易用而著称，同时初学者通常难以破解，因而又被称为“不可破译的密码”。这也让很多人使用维吉尼亚密码来加密的目的就是为了将其破解。&#10;3.多表密码最早在1467年左右由莱昂·巴蒂斯塔·阿尔伯蒂提出，他使用了一个金属密码盘来切换密码表，只是这个系统只能做些有限的转换。后来1508年时，约翰尼斯·特里特米乌斯《隐写术》（Steganographia）中发明的表格法成为了维吉尼亚密码的关键部分。然而当时此方法只能对密码表做一些简单的、可预测的切换。这一加密技术也称为特里特米乌斯密码。&#10;4.这一方法真正出现是在吉奥万·巴蒂斯塔·贝拉索于1553年所著的书《吉奥万·巴蒂斯塔·贝拉索先生的算术》中。他以特里特米乌斯的表格法为基础，同时引入了密钥的概念。&#10;5.布莱斯·德·维吉尼亚于1586年亨利三世时期发明了更为简单却又更有效的自动密钥密码。之后，19世纪时贝拉索的方法被误认为是由维吉尼亚首先发明的。大卫·卡恩在《破译者》中对此表示遗憾，他写道“历史忽略了这一重要贡献，将其归功于维吉尼亚，虽然他对此并不知道”。&#10;6.由于破译的难度很高，维吉尼亚密码也因此获得了很高的声望。知名作家、数学家查尔斯·路特维奇·道奇森（笔名路易斯·卡罗）在其1868年所编、收于一儿童杂志的《字母表密码》中称其是不可破译的。1917年，《科学美国人》将维吉尼亚密码称为“无法被转化的”。然而，维吉尼亚密码却配不上这样的称号。查尔斯·巴贝奇完成了破译的工作，但他没有将此发表。之后，弗里德里希·卡西斯基于19世纪完全破解并发表了他的方法。甚至在此之前，一些资深密码分析家在16世纪就能偶尔将其破解。&#10;7.维吉尼亚密码足够地易于使用使其能够作为战地密码。例如，美国南北战争期间南军就使用黄铜密码盘生成维吉尼亚密码。北军则经常能够破译南军的密码。战争自始至终，南军主要使用三个密钥，分别为“Manchester Bluff（曼彻斯特的虚张声势）”、“Complete Victory（完全的胜利）”以及战争后期的“Come Retribution（报应来临）”。&#10;8.吉尔伯特·维尔南（Gilbert Vernam）曾试图对已被破译的密码进行修补（于1918年创造了维尔南-维尼吉亚密码），然而这终究无济于事。不过维尔南的发明最终促成了一次性密码本的诞生，这是一种理论上不可破译的密码。&#10;&#10;1. The Virginia password (also translated as Vigenal password) is an encryption algorithm that uses a series of Caesar passwords to form a password alphabet, which is a simple form of multi-table passwords.&#10;2. The Virginia Code has been invented many times. This method was first recorded in the book &quot;The Password of Mr. Giovan Battista Bellasso&quot; by Giovan Battista Bellasso in 1553. However, it was later misrepresented in the 19th century as being created by French diplomat Bryce de Virginia, so it is now called the &quot;Virginia code&quot;. The Virginia password is known for its simplicity and ease of use. At the same time, it is often difficult for beginners to crack, so it is also known as an &quot;unbreakable password&quot;. This also makes many people use the Virginia password to encrypt the purpose is to crack it. &#10;3. The multi-table password was first proposed by Leon Battista Alberti around 1467. He used a metal code disk to switch the code table, but this system can only do some limited conversions. Later, in 1508, the tabular method invented in Johannes Trimitius' Steganographia became a key part of the Virginia code. However, at this time, this method could only do some simple and predictable switching of the password table. This encryption technology is also known as the Tritium password. &#10;4. This method really appeared in the book &quot;The Arithmetic of Mr. Giovan Battista Bellasso&quot; written by Giovan Batista Bellasso in 1553. He was based on the table method of Tritmius and introduced the concept of key. &#10;5. Bryce de Virginia invented a simpler but more effective automatic key cipher in Henry III in 1586. Later, in the 19th century, Bellazo's method was mistaken for the first invention by Virginia. David Kahn regretted this in The Decipherer, writing that &quot;History ignored this important contribution and attributed it to Virginia, although he didn't know about it.&quot; &#10;6. Because of the difficulty of deciphering, the Virginia password has gained a high reputation. Well-known writer and mathematician Charles Lutwich Dodgeson (pen name Luis Carlo) wrote in 1868 and collected it in a children's magazine &quot;The Alphabet Code&quot; that it is unbreakable. In 1917, Scientific American called the Virginia code &quot;unconvertible.&quot; However, the Virginia code is not worthy of such a title. Charles Babbage completed the work of deciphering, but he did not publish it. After that, Friedrich Cassis completely cracked and published his method based on the 19th century. Even before this, some senior cryptanalysts could occasionally crack it in the 16th century. &#10;7. The Virginia password is sufficiently easy to use that it can be used as a battlefield password. For example, during the American Civil War, the Southern Army used brass code disks to generate Virginia codes. The North Army can often decipher the code of the South Army. From the beginning to the end of the war, the Southern Army mainly used three keys, namely &quot;Manchester Bluff&quot;, &quot;Complete Victory&quot; and &quot;Come Retribution&quot; in the later period of the war. &#10;8. Gilbert Vernam tried to patch up the code that had been deciphered (the Virnan-Vignia code was created in 1918), but this did not help. But Vernon's invention eventually led to the birth of the one-time codebook, which is a theoretically unbreakable code." wrapText="true" GridPane.columnSpan="11" GridPane.rowIndex="4" GridPane.rowSpan="21">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+      </TextArea>
+      <TextField alignment="CENTER" editable="false" prefHeight="45.0" prefWidth="970.0" text="Vigenere密码历史概述" GridPane.columnSpan="11" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+    </children>
+</GridPane>

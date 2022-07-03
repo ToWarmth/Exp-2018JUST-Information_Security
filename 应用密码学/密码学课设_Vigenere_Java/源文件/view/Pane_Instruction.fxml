@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SecretDesign.controller.Pane_Instruction_Con">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <MenuBar fx:id="menubar" GridPane.columnSpan="11">
+            <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#clickPrevious" text="上一步" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#clickNext" text="下一步" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#clickExit" text="退出" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="控制">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#click_main" text="主界面" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_History" text="Vigenere密码历史" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_Describe" text="Vigenere密码描述" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_CrackingMethod" text="Vigenere密码破译方法" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_EnandDe" text="Vigenere加/解密" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#click_Instruction" text="使用说明" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_FurtherStudy" text="密码深入学习" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <TextArea editable="false" prefHeight="455.0" prefWidth="970.0" text="1.本软件有四大主要功能：Vigenere密码历史概述、Vigenere密码描述、Vigenere密码解密方法说明、Vigenere密码加解密。&#10;2.本软件有两种控制结构，一个是菜单栏的文件项，一个是菜单栏的控制项。文件项中布有三个控制项：上一步、下一步、退出，可通过此经历Vigenere密码标准介绍流程；控制项中布有各界面的直接跳转项，单击各界面的跳转项可直接跳转至各界面。&#10;3.本软件还设有菜单栏的帮助项，如想继续深入学习各密码可进入学习。&#10;&#10;附：本软件的标准流程为：&#10;主界面-&gt;Vigenere密码通使用指南界面-&gt;Vigenere密码历史概述界面-&gt;Vigenere密码描述界面-&gt;Vigenere密码解密方法说明界面-&gt;Vigenere密码加解密界面-&gt;密码深入学习界面。&#10;&#10;1.This software has four main functions: Vigenere password history overview, Vigenere password description, Vigenere password decryption method description, Vigenere password encryption and decryption. &#10;2.This software has two control structures, one is the file item of the menu bar, and the other is the control item of the menu bar. There are three control items in the file item: previous step, next step, exit, you can experience the introduction process of Vigenere password standard through this; the control items are arranged with direct jump items of each interface, click the jump item of each interface Jump to each interface. &#10;3.The software also has a help item in the menu bar, if you want to continue to learn the passwords, you can enter the learning. &#10;&#10;Attachment: The standard process of this software is: Main interface-&gt;Vigenere password pass-through guide interface-&gt;Vigenere password history overview interface-&gt;Vigenere password description interface-&gt;Vigenere password decryption method description interface-&gt;Vigenere password encryption and decryption interface-&gt;password In-depth learning interface." wrapText="true" GridPane.columnSpan="5" GridPane.rowIndex="4" GridPane.rowSpan="21">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+      </TextArea>
+      <TextField alignment="CENTER" editable="false" prefHeight="45.0" prefWidth="970.0" text="Vigenere密码通使用指南" GridPane.columnSpan="11" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="252.0" fitWidth="160.0" GridPane.columnIndex="8" GridPane.rowIndex="18">
+         <image>
+            <Image url="@../icon/Confident_Smile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="252.0" fitWidth="160.0" GridPane.columnIndex="6" GridPane.rowIndex="18">
+         <image>
+            <Image url="@../icon/Confident_Smile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="160.0" fitWidth="147.2" GridPane.columnIndex="7" GridPane.rowIndex="9">
+         <image>
+            <Image url="@../icon/Country_Icon.png" />
+         </image>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </ImageView>
+      <ImageView fitHeight="91.68" fitWidth="96.0" GridPane.columnIndex="5" GridPane.rowIndex="9">
+         <image>
+            <Image url="@../icon/School_Icon.jpg" />
+         </image>
+         <GridPane.margin>
+            <Insets left="75.0" />
+         </GridPane.margin>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="98.5" GridPane.columnIndex="9" GridPane.rowIndex="9">
+         <image>
+            <Image url="@../icon/Emblem_Icon.png" />
+         </image>
+      </ImageView>
+    </children>
+</GridPane>

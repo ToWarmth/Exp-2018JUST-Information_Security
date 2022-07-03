@@ -1,0 +1,347 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/24/2020 16:49:47"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Test_1_1
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Test_1_1_vlg_sample_tst(
+	clkin,
+	datain,
+	sampler_tx
+);
+input  clkin;
+input  datain;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clkin or datain)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Test_1_1_vlg_check_tst (
+	dataout,
+	fail,
+	flag1,
+	flag2,
+	tmp,
+	sampler_rx
+);
+input  dataout;
+input  fail;
+input  flag1;
+input  flag2;
+input [1:0] tmp;
+input sampler_rx;
+
+reg  dataout_expected;
+reg  fail_expected;
+reg  flag1_expected;
+reg  flag2_expected;
+reg [1:0] tmp_expected;
+
+reg  dataout_prev;
+reg  fail_prev;
+reg  flag1_prev;
+reg  flag2_prev;
+reg [1:0] tmp_prev;
+
+reg  dataout_expected_prev;
+reg  fail_expected_prev;
+reg  flag1_expected_prev;
+reg  flag2_expected_prev;
+reg [1:0] tmp_expected_prev;
+
+reg  last_dataout_exp;
+reg  last_fail_exp;
+reg  last_flag1_exp;
+reg  last_flag2_exp;
+reg [1:0] last_tmp_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:5] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 5'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	dataout_prev = dataout;
+	fail_prev = fail;
+	flag1_prev = flag1;
+	flag2_prev = flag2;
+	tmp_prev = tmp;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	dataout_expected_prev = dataout_expected;
+	fail_expected_prev = fail_expected;
+	flag1_expected_prev = flag1_expected;
+	flag2_expected_prev = flag2_expected;
+	tmp_expected_prev = tmp_expected;
+end
+
+
+
+// expected dataout
+initial
+begin
+	dataout_expected = 1'bX;
+	dataout_expected = #999000 1'b0;
+end 
+
+// expected fail
+initial
+begin
+	fail_expected = 1'bX;
+	fail_expected = #999000 1'b0;
+end 
+
+// expected flag1
+initial
+begin
+	flag1_expected = 1'bX;
+	flag1_expected = #999000 1'b0;
+end 
+
+// expected flag2
+initial
+begin
+	flag2_expected = 1'bX;
+	flag2_expected = #999000 1'b0;
+end 
+// expected tmp[ 1 ]
+initial
+begin
+	tmp_expected[1] = 1'bX;
+	tmp_expected[1] = #999000 1'b0;
+end 
+// expected tmp[ 0 ]
+initial
+begin
+	tmp_expected[0] = 1'bX;
+	tmp_expected[0] = #999000 1'b0;
+end 
+// generate trigger
+always @(dataout_expected or dataout or fail_expected or fail or flag1_expected or flag1 or flag2_expected or flag2 or tmp_expected or tmp)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected dataout = %b | expected fail = %b | expected flag1 = %b | expected flag2 = %b | expected tmp = %b | ",dataout_expected_prev,fail_expected_prev,flag1_expected_prev,flag2_expected_prev,tmp_expected_prev);
+	$display("| real dataout = %b | real fail = %b | real flag1 = %b | real flag2 = %b | real tmp = %b | ",dataout_prev,fail_prev,flag1_prev,flag2_prev,tmp_prev);
+`endif
+	if (
+		( dataout_expected_prev !== 1'bx ) && ( dataout_prev !== dataout_expected_prev )
+		&& ((dataout_expected_prev !== last_dataout_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dataout :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dataout_expected_prev);
+		$display ("     Real value = %b", dataout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dataout_exp = dataout_expected_prev;
+	end
+	if (
+		( fail_expected_prev !== 1'bx ) && ( fail_prev !== fail_expected_prev )
+		&& ((fail_expected_prev !== last_fail_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fail :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fail_expected_prev);
+		$display ("     Real value = %b", fail_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_fail_exp = fail_expected_prev;
+	end
+	if (
+		( flag1_expected_prev !== 1'bx ) && ( flag1_prev !== flag1_expected_prev )
+		&& ((flag1_expected_prev !== last_flag1_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port flag1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", flag1_expected_prev);
+		$display ("     Real value = %b", flag1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_flag1_exp = flag1_expected_prev;
+	end
+	if (
+		( flag2_expected_prev !== 1'bx ) && ( flag2_prev !== flag2_expected_prev )
+		&& ((flag2_expected_prev !== last_flag2_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port flag2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", flag2_expected_prev);
+		$display ("     Real value = %b", flag2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_flag2_exp = flag2_expected_prev;
+	end
+	if (
+		( tmp_expected_prev[0] !== 1'bx ) && ( tmp_prev[0] !== tmp_expected_prev[0] )
+		&& ((tmp_expected_prev[0] !== last_tmp_exp[0]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port tmp[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", tmp_expected_prev);
+		$display ("     Real value = %b", tmp_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_tmp_exp[0] = tmp_expected_prev[0];
+	end
+	if (
+		( tmp_expected_prev[1] !== 1'bx ) && ( tmp_prev[1] !== tmp_expected_prev[1] )
+		&& ((tmp_expected_prev[1] !== last_tmp_exp[1]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port tmp[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", tmp_expected_prev);
+		$display ("     Real value = %b", tmp_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_tmp_exp[1] = tmp_expected_prev[1];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#4160000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Test_1_1_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clkin;
+reg datain;
+// wires                                               
+wire dataout;
+wire fail;
+wire flag1;
+wire flag2;
+wire [1:0] tmp;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Test_1_1 i1 (
+// port map - connection between master ports and signals/registers   
+	.clkin(clkin),
+	.datain(datain),
+	.dataout(dataout),
+	.fail(fail),
+	.flag1(flag1),
+	.flag2(flag2),
+	.tmp(tmp)
+);
+
+// clkin
+always
+begin
+	clkin = 1'b0;
+	clkin = #80000 1'b1;
+	#80000;
+end 
+
+// datain
+initial
+begin
+	repeat(8)
+	begin
+		datain = 1'b0;
+		datain = #240000 1'b1;
+		# 240000;
+	end
+	datain = 1'b0;
+	datain = #240000 1'b1;
+end 
+
+Test_1_1_vlg_sample_tst tb_sample (
+	.clkin(clkin),
+	.datain(datain),
+	.sampler_tx(sampler)
+);
+
+Test_1_1_vlg_check_tst tb_out(
+	.dataout(dataout),
+	.fail(fail),
+	.flag1(flag1),
+	.flag2(flag2),
+	.tmp(tmp),
+	.sampler_rx(sampler)
+);
+endmodule
+

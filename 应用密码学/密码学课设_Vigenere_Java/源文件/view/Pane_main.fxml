@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<SplitPane dividerPositions="0.362876254180602" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SecretDesign.controller.Pane_main_Con">
+         <items>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="156.0">
+         <children>
+                     <ImageView fitHeight="97.0" fitWidth="319.0" layoutX="19.0" layoutY="14.0">
+                        <image>
+                           <Image url="@../icon/Vigenere.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="97.0" fitWidth="100.0" layoutX="125.0" layoutY="142.0">
+                        <image>
+                           <Image url="@../icon/School_Icon.jpg" />
+                        </image>
+                     </ImageView>
+                     <GridPane layoutX="10.0" layoutY="341.0" prefHeight="228.0" prefWidth="312.0">
+                       <columnConstraints>
+                         <ColumnConstraints />
+                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                       </columnConstraints>
+                       <rowConstraints>
+                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                       </rowConstraints>
+                        <children>
+                           <Label prefHeight="20.0" prefWidth="173.0" text="开发时间：2020.4" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                              <font>
+                                 <Font name="Calibri" size="21.0" />
+                              </font>
+                              </Label>
+                           <Label graphicTextGap="5.0" prefHeight="28.0" prefWidth="242.0" text="开发者：陈四贵   曹  萍" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                              <font>
+                                 <Font name="Calibri" size="21.0" />
+                              </font>
+                              </Label>
+                           <Label text="版本号：20.4.1.1" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647">
+                              <font>
+                                 <Font name="Calibri" size="21.0" />
+                              </font>
+                              </Label>
+                           <Label text="开发语言：Java" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+                              <font>
+                                 <Font name="Calibri" size="21.0" />
+                              </font>
+                              </Label>
+                           <Label prefHeight="28.0" prefWidth="285.0" text="适用人群：学生、密码爱好者" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="4">
+                              <font>
+                                 <Font name="Calibri" size="21.0" />
+                              </font>
+                              </Label>
+                           <Label text="Copyright:@All rights deserved" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" />
+                        </children>
+                     </GridPane>
+         </children>
+                 </AnchorPane>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                  <children>
+                     <Button layoutX="537.0" layoutY="525.0" mnemonicParsing="false" onAction="#handle" prefHeight="34.0" prefWidth="72.0" text="-&gt;继续" />
+
+                     <TextArea editable="false" layoutX="22.0" layoutY="25.0" prefHeight="484.0" prefWidth="587.0" text="使用须知：&#10;1.本软件为应用密码学课程设计作品，可供广大密码学爱好者学习研究使用。&#10;2.本软件有四大功能，分别是Vigenere密码历史概述、Vigenere密码描述、Vigenere密码破解、Vigenere密码加解密功能。内置加密、解密图。&#10;3.在使用过程中如发现使用等问题，欢迎积极反馈@QQ:932604083或发送反馈邮件至Hbcsg_speed@163.com。我们会根据您的反馈作出适当优化。&#10;4.您的支持是我们前进的动力，如果您觉得本软件还不错，欢迎分享。&#10;5.单击“-&gt;继续“进入下一界面。&#10;&#10;&#10;Usage Notice:&#10;1. This software is designed for applied cryptography courses, which can be used by the majority of cryptography enthusiasts to study and use.&#10;2. This software has four major functions, namely Vigenere password history overview, Vigenere password description, Vigenere password cracking, Vigenere password encryption and decryption functions. Built-in encryption and decryption map. &#10;3. If you find any problems during use, please welcome positive feedback @QQ:932604083 or send feedback email to Hbcsg_speed@163.com. We will make appropriate optimization based on your feedback. &#10;4. Your support is our driving force, if you think this software is not bad, welcome to share. 5. Click &quot;-&gt;Continue&quot; to enter the next interface." wrapText="true">
+                        <font>
+                           <Font name="Cambria" size="19.0" />
+                        </font>
+                        </TextArea>
+                  </children>
+                  </AnchorPane>
+         </items>
+      </SplitPane>

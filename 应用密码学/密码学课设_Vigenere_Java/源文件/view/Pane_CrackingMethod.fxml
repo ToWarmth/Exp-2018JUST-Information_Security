@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SecretDesign.controller.Pane_CrackingMethod_Con">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <MenuBar fx:id="menubar" GridPane.columnSpan="11">
+            <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#clickPrevious" text="上一步" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#clickNext" text="下一步" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#clickExit" text="退出" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="控制">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#click_main" text="主界面" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_History" text="Vigenere密码历史" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_Describe" text="Vigenere密码描述" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_CrackingMethod" text="Vigenere密码破译方法" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_EnandDe" text="Vigenere加/解密" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#click_Instruction" text="使用说明" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#click_FurtherStudy" text="密码深入学习" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <TextArea editable="false" prefHeight="455.0" prefWidth="970.0" text="1.对包括维吉尼亚密码在内的所有多表密码的破译都是以字母频率为基础的，但直接的频率分析却并不适用。例如，如果P是密文中出现次数最多的字母，则P很有可能对应E（前提是明文的语言为英语）。原因在于E是英语中使用频率最高的字母。然而，由于在维吉尼亚密码中，E可以被加密成不同的密文，因而简单的频率分析在这里并没有用。&#10;2.破译维吉尼亚密码的关键在于它的密钥是循环重复的。如果我们知道了密钥的长度，那密文就可以被看作是交织在一起的凯撒密码，而其中每一个都可以单独破解。使用卡西斯基试验和弗里德曼试验来得到密钥的长度。&#10;3.卡西斯基试验&#10;弗里德里希·卡西斯基于1863年首先发表了完整的维吉尼亚密码的破译方法，称为卡西斯基试验（Kasiski examination）。早先的一些破译都是基于对于明文的认识、或者使用可识别的词语作为密钥。而卡西斯基的方法则没有这些限制。然而，在此之前，已经有人意识到了这一方法。1854年，查尔斯·巴贝奇受到斯维提斯（John Hall Brock Thwaites）在《艺术协会杂志》（Journal of the Society of the Arts）上声称发明了“新密码”的激励，从而破译了维吉尼亚密码。巴贝奇发现斯维提斯的密码只不过是维吉尼亚密码的一个变种而已，而斯维提斯则向其挑战，让他尝试破译用两个不同长度的密钥加密的密文。巴贝奇成功地进行了破译，得到的明文是丁尼生所写的诗《罪恶的想象》（The Vision of Sin），使用的密钥则是丁尼生妻子的名字Emily（艾米莉）。巴贝奇从未对他的方法进行过解释 。在对巴贝奇生前笔记的研究中发现，早在1846年巴贝奇就使用了这一方法，与后来卡西斯基发表的方法相同。&#10;卡西斯基试验是基于类似the这样的常用单词有可能被同样的密钥字母进行加密，从而在密文中重复出现。例如，明文中不同的CRYPTO可能被密钥ABCDEF加密成不同的密文：&#10;密钥：ABCDEF AB CDEFA BCD EFABCDEFABCD&#10;明文：CRYPTO IS SHORT FOR CRYPTOGRAPHY&#10;密文：CSASXT IT UKSWT GQU GWYQVRKWAQJB&#10;此时明文中重复的元素在密文中并不重复。然而，如果密钥相同的话，结果可能便为（使用密钥ABCD）：&#10;密钥：ABCDAB CD ABCDA BCD ABCDABCDABCD&#10;明文：CRYPTO IS SHORT FOR CRYPTOGRAPHY&#10;密文：CSASTP KV SIQUT GQU CSASTPIUAQJB&#10;此时卡西斯基试验就能产生效果。对于更长的段落此方法更为有效，因为通常密文中重复的片段会更多。如通过下面的密文就能破译出密钥的长度：&#10;密文：DYDUXRMHTVDVNQDQNWDYDUXRMHARTJGWNQD&#10;其中，两个DYDUXRMH的出现相隔了18个字母。因此，可以假定密钥的长度是18的约数，即长度为18、9、6、3或2。而两个NQD则相距20个字母，意味着密钥长度应为20、10、5、4或2。取两者的交集，则可以基本确定密钥长度为2。&#10;4.弗里德曼试验&#10;弗里德曼试验由威廉·F·弗里德曼（William F. Friedman）于1920年代发明。他使用了重合指数（index of coincidence）来描述密文字母频率的不匀性，从而破译密码。此方法只是一种估计，会随着文本长度的增加而更为精确。在实践中，会尝试接近此估计的多个密钥长度。一种更好的方法是将密文写成矩阵形式，其中列数与假定的密钥长度一致，将每一列的重合指数单独计算，并求得平均重合指数。对于所有可能的密钥长度，平均重合指数最高的最有可能是真正的密钥长度。这样的试验可以作为卡西斯基试验的补充。&#10;5.频率分析&#10;一旦能够确定密钥的长度，密文就能重新写成多列，列数与密钥长度对应。这样每一列其实就是一个凯撒密码，而此密码的密钥（偏移量）则对应于维吉尼亚密码密钥的相应字母。与破译凯撒密码类似的方法，就能将密文破译。&#10;柯克霍夫方法作为卡西斯基试验的改进，由奥古斯特·柯克霍夫（Auguste Kerckhoffs）提出。它将每一列的字母频率与转换后的明文频率相对应而得出每一列的密钥字母。一旦密钥中每一个字母都能确定，就能很简单地破译密文，从而得到明文。如果维吉尼亚字母表表格本身是杂乱而非按通常字母表顺序的话，那柯克霍夫方法就会无效，但卡西斯基试验和重复指数对于决定密钥长度仍旧是有效的。&#10;&#10;&#10;1. The decoding of all multi-table passwords, including the Virginia password, is based on letter frequency, but direct frequency analysis is not applicable. For example, if P is the most frequently occurring letter in cipher text, then P is likely to correspond to E (provided that the language of the plain text is English). The reason is that E is the most frequently used letter in English. However, because in Virginia passwords, E can be encrypted into different ciphertexts, so simple frequency analysis is not useful here. &#10;2. The key to deciphering the Virginia password is that its key is cyclically repeated. If we know the length of the key, the ciphertext can be regarded as a Caesar cipher intertwined, and each of them can be cracked separately. Use the Kasiski test and Friedman test to get the length of the key. &#10;3. The Kasiski test Friedrich Cassis first published a complete method of deciphering the Virginia code in 1863, which is called the Kasiski examination. Some of the earlier deciphering was based on the knowledge of plain text or the use of recognizable words as the key. Kasiski's method does not have these restrictions. However, before this, some people have realized this method. In 1854, Charles Babbage was inspired by John Hall Brock Thwaites’ claim in the Journal of the Society of the Arts to invent the “new code”, which deciphered Viggi Nia password. Babbage discovered that Svetis' password was just a variant of the Virginia password, and Svetis challenged him to try to decipher the ciphertext encrypted with two keys of different lengths. Babbage successfully deciphered, the plaintext obtained was the poem &quot;The Vision of Sin&quot; written by Tennyson, and the key used was the name of Tennyson's wife Emily (Emily) . Babbage never explained his method. In the study of Babbage's lifetime notes, it was found that Babbage used this method as early as 1846, which was the same as the method published by Kasyski. The Cassiski experiment is based on the fact that common words like the may be encrypted by the same key letter and thus appear repeatedly in the ciphertext. For example, different CRYPTOs in the plaintext may be encrypted into different ciphertexts by the key ABCDEF: Key: ABCDEF AB CDEFA BCD EFABCDEFABCD Plaintext: CRYPTO IS SHORT FOR CRYPTOGRAPHY Ciphertext: CSASXT IT UKSWT GQU GWYQVRKWAQJB At this time, the duplicate elements in the plaintext are It is not repeated in the ciphertext. However, if the keys are the same, the result may be (using the key ABCD): Key: ABCDAB CD ABCDA BCD ABCDABCDABCD Plain text: CRYPTO IS SHORT FOR CRYPTOGRAPHY Cipher text: CSASTP KV SIQUT GQU CSASTPIUAQJB At this time, the Cassius test Can produce effects. This method is more effective for longer paragraphs, because there are usually more repeated fragments in the ciphertext. For example, the length of the key can be deciphered through the following ciphertext: Ciphertext: DYDUXRMHTVDVNQDQNWDYDUXRMHARTJGWNQD Among them, the appearance of the two DYDUXRMH is separated by 18 letters. Therefore, it can be assumed that the length of the key is a divisor of 18, that is, the length is 18, 9, 6, 3, or 2. The two NQDs are 20 letters apart, which means that the key length should be 20, 10, 5, 4, or 2. Taking the intersection of the two, you can basically determine that the key length is 2. &#10;4. Friedman test The Friedman test was invented by William F. Friedman in the 1920s. He used the index of coincidence to describe the unevenness of the frequency of ciphertext letters, so as to decipher the code. This method is only an estimate and will become more accurate as the text length increases. In practice, multiple key lengths close to this estimate will be tried. A better method is to write the ciphertext in matrix form, where the number of columns is the same as the assumed key length, calculate the coincidence index of each column separately, and find the average coincidence index. For all possible key lengths, the highest average coincidence index is the most likely true key length. Such a test can be used as a supplement to the Cassius test. &#10;5. Frequency analysis Once the length of the key can be determined, the ciphertext can be rewritten into multiple columns, and the number of columns corresponds to the length of the key. In this way, each column is actually a Caesar cipher, and the key (offset) of this cipher corresponds to the corresponding letter of the Virginia cipher key. A method similar to deciphering Caesar's code can decipher the ciphertext. The Kirkhoff method was proposed by Auguste Kerckhoffs as an improvement of the Kaschisky experiment. It corresponds the letter frequency of each column to the frequency of the converted plain text to obtain the key letter of each column. Once each letter in the key can be determined, the ciphertext can be easily deciphered to obtain the plaintext. If the Virginia alphabet table itself is messy and not in the usual alphabetical order, the Kirkhof method will be ineffective, but the Kaschiski test and repetition index are still valid for determining the key length." wrapText="true" GridPane.columnSpan="11" GridPane.rowIndex="4" GridPane.rowSpan="21">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+      </TextArea>
+      <TextField alignment="CENTER" editable="false" prefHeight="45.0" prefWidth="970.0" text="Vigenere密码破译方法" GridPane.columnSpan="11" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+    </children>
+</GridPane>

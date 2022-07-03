@@ -1,0 +1,6 @@
+
+State Machine - |test|state
+Name state.00 state.finish state.compute 
+state.00 0 0 0 
+state.compute 1 0 1 
+state.finish 1 1 0 

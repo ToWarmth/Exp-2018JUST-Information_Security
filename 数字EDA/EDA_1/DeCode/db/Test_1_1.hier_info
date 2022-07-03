@@ -1,0 +1,14 @@
+|Test_1_1
+clkin => flag1~reg0.CLK
+clkin => tmp[0]~reg0.CLK
+clkin => tmp[1]~reg0.CLK
+clkin => flag2~reg0.CLK
+datain => tmp[1]~reg0.DATAIN
+tmp[0] <= tmp[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tmp[1] <= tmp[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+flag1 <= flag1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+flag2 <= flag2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout <= dataout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+fail <= fail~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
